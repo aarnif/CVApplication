@@ -6,6 +6,8 @@ import useField from "./hooks/useField";
 import CVCreator from "./components/CVCreator/index";
 import Preview from "./components/Preview";
 
+import { v4 as uuid } from "uuid";
+
 function App() {
   const firstName = useField("text", "John");
   const lastName = useField("text", "Doe");
@@ -16,6 +18,41 @@ function App() {
   const location = useField("text", "Helsinki, Finland");
   const homePage = useField("text", "www.mywebsite.com");
   const gitHubProfile = useField("text", "www.github.com/myprofile");
+  const workExperience = {
+    position: useField("text", "Position"),
+    company: useField("text", "Company"),
+    startDate: useField("date", "Start date"),
+    endDate: useField("date", "End date"),
+    description: useField("text", "Description."),
+  };
+
+  const workExperiencesData = [
+    {
+      id: uuid(),
+      ...workExperience,
+    },
+  ];
+
+  const [workExperiences, setWorkExperiences] = useState(workExperiencesData);
+
+  const addNewWorkExperience = () => {
+    console.log("Clicked add new work experience.");
+    const newWorkExperience = {
+      id: uuid(),
+      ...workExperience,
+    };
+    setWorkExperiences([...workExperiences, newWorkExperience]);
+    console.log(workExperiences);
+  };
+
+  const deleteWorkExperience = (event, id) => {
+    event.preventDefault();
+    console.log("Clicked delete work experience.");
+    const newWorkExperiences = workExperiences.filter(
+      (workExperience) => workExperience.id !== id
+    );
+    setWorkExperiences(newWorkExperiences);
+  };
 
   return (
     <>
@@ -29,6 +66,9 @@ function App() {
         phoneNumber={phoneNumber}
         homePage={homePage}
         gitHubProfile={gitHubProfile}
+        workExperiences={workExperiences}
+        addNewWorkExperience={addNewWorkExperience}
+        deleteWorkExperience={deleteWorkExperience}
       />
       <Preview />
     </>

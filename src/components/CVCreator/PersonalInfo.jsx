@@ -2,7 +2,7 @@ import React from "react";
 
 const PersonalInfo = ({ firstName, lastName, title, description }) => {
   return (
-    <div className="border-2 border-black p-10">
+    <div className="border-2 border-black m-10 p-10">
       <h1 className="text-2xl">Personal Info</h1>
       <form>
         <ul>

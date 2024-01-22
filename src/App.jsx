@@ -11,6 +11,11 @@ function App() {
   const lastName = useField("text", "Doe");
   const title = useField("text", "Developer");
   const description = useField("text", "A brief description.");
+  const email = useField("email", "john.doe@gmail.com");
+  const phoneNumber = useField("phonenumber", "0400-123-123");
+  const location = useField("text", "Helsinki, Finland");
+  const homePage = useField("text", "www.mywebsite.com");
+  const gitHubProfile = useField("text", "www.github.com/myprofile");
 
   return (
     <>
@@ -19,6 +24,11 @@ function App() {
         lastName={lastName}
         title={title}
         description={description}
+        email={email}
+        location={location}
+        phoneNumber={phoneNumber}
+        homePage={homePage}
+        gitHubProfile={gitHubProfile}
       />
       <Preview />
     </>

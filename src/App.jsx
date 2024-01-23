@@ -35,6 +35,10 @@ function App() {
     description: useField("text", "A degree description."),
   };
 
+  const skill = {
+    name: useField("text", "A programming language or a technology etc."),
+  };
+
   const workExperiencesData = [
     {
       id: uuid(),
@@ -49,8 +53,16 @@ function App() {
     },
   ];
 
+  const skillsData = [
+    {
+      id: uuid(),
+      ...skill,
+    },
+  ];
+
   const [workExperiences, setWorkExperiences] = useState(workExperiencesData);
   const [degrees, setDegrees] = useState(degreeData);
+  const [skills, setSkills] = useState(skillsData);
 
   const addNewWorkExperience = () => {
     console.log("Clicked add new work experience.");
@@ -88,6 +100,23 @@ function App() {
     setDegrees(newDegrees);
   };
 
+  const addSkill = () => {
+    console.log("Clicked add new skill.");
+    const newSkill = {
+      id: uuid(),
+      ...skill,
+    };
+    setSkills([...skills, newSkill]);
+    console.log(skills);
+  };
+
+  const deleteSkill = (event, id) => {
+    event.preventDefault();
+    console.log("Clicked delete skill.");
+    const newSkills = skills.filter((skill) => skill.id !== id);
+    setSkills(newSkills);
+  };
+
   return (
     <>
       <CVCreator
@@ -100,12 +129,16 @@ function App() {
         phoneNumber={phoneNumber}
         homePage={homePage}
         gitHubProfile={gitHubProfile}
+        skill={skill}
         workExperiences={workExperiences}
         addNewWorkExperience={addNewWorkExperience}
         deleteWorkExperience={deleteWorkExperience}
         degrees={degrees}
         addNewDegree={addNewDegree}
         deleteDegree={deleteDegree}
+        skills={skills}
+        addSkill={addSkill}
+        deleteSkill={deleteSkill}
       />
       <Preview />
     </>

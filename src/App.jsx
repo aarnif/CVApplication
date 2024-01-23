@@ -4,7 +4,7 @@ import "./App.css";
 import useField from "./hooks/useField";
 
 import CVCreator from "./components/CVCreator/index";
-import Preview from "./components/Preview";
+import Preview from "./components/Preview/index";
 
 import { v4 as uuid } from "uuid";
 
@@ -140,7 +140,21 @@ function App() {
         addSkill={addSkill}
         deleteSkill={deleteSkill}
       />
-      <Preview />
+      <Preview
+        firstName={firstName}
+        lastName={lastName}
+        title={title}
+        description={description}
+        email={email}
+        location={location}
+        phoneNumber={phoneNumber}
+        homePage={homePage}
+        gitHubProfile={gitHubProfile}
+        skill={skill}
+        workExperiences={workExperiences}
+        degrees={degrees}
+        skills={skills}
+      />
     </>
   );
 }

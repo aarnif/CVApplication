@@ -18,12 +18,21 @@ function App() {
   const location = useField("text", "Helsinki, Finland");
   const homePage = useField("text", "www.mywebsite.com");
   const gitHubProfile = useField("text", "www.github.com/myprofile");
+
   const workExperience = {
     position: useField("text", "Position"),
     company: useField("text", "Company"),
     startDate: useField("date", "Start date"),
     endDate: useField("date", "End date"),
-    description: useField("text", "Description."),
+    description: useField("text", "A job description."),
+  };
+
+  const degree = {
+    school: useField("text", "School"),
+    name: useField("text", "Degree name"),
+    startDate: useField("date", "Start date"),
+    endDate: useField("date", "End date"),
+    description: useField("text", "A degree description."),
   };
 
   const workExperiencesData = [
@@ -33,7 +42,15 @@ function App() {
     },
   ];
 
+  const degreeData = [
+    {
+      id: uuid(),
+      ...degree,
+    },
+  ];
+
   const [workExperiences, setWorkExperiences] = useState(workExperiencesData);
+  const [degrees, setDegrees] = useState(degreeData);
 
   const addNewWorkExperience = () => {
     console.log("Clicked add new work experience.");
@@ -54,6 +71,23 @@ function App() {
     setWorkExperiences(newWorkExperiences);
   };
 
+  const addNewDegree = () => {
+    console.log("Clicked add new degree.");
+    const newDegree = {
+      id: uuid(),
+      ...degree,
+    };
+    setDegrees([...degrees, newDegree]);
+    console.log(degrees);
+  };
+
+  const deleteDegree = (event, id) => {
+    event.preventDefault();
+    console.log("Clicked delete degree.");
+    const newDegrees = degrees.filter((degree) => degree.id !== id);
+    setDegrees(newDegrees);
+  };
+
   return (
     <>
       <CVCreator
@@ -69,6 +103,9 @@ function App() {
         workExperiences={workExperiences}
         addNewWorkExperience={addNewWorkExperience}
         deleteWorkExperience={deleteWorkExperience}
+        degrees={degrees}
+        addNewDegree={addNewDegree}
+        deleteDegree={deleteDegree}
       />
       <Preview />
     </>

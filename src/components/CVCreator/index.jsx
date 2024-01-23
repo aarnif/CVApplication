@@ -2,12 +2,16 @@ import React from "react";
 import PersonalInfo from "./PersonalInfo";
 import ContactInfo from "./ContactInfo";
 import WorkExperience from "./WorkExperience";
+import Degree from "./Degree";
 
 const CVCreator = ({
   props,
   workExperiences,
   addNewWorkExperience,
   deleteWorkExperience,
+  degrees,
+  addNewDegree,
+  deleteDegree,
 }) => {
   const {
     firstName,
@@ -56,6 +60,28 @@ const CVCreator = ({
       <button
         className="border-2 border-black mx-10 px-6 py-2"
         onClick={addNewWorkExperience}
+      >
+        Add new
+      </button>
+      {degrees.map((degree, index) => {
+        console.log(index);
+        return (
+          <Degree
+            key={degree.id}
+            id={degree.id}
+            index={index + 1}
+            school={degree.school}
+            company={degree.name}
+            startDate={degree.startDate}
+            endDate={degree.endDate}
+            description={degree.description}
+            deleteDegree={deleteDegree}
+          />
+        );
+      })}
+      <button
+        className="border-2 border-black mx-10 px-6 py-2"
+        onClick={addNewDegree}
       >
         Add new
       </button>

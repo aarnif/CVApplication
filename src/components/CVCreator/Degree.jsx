@@ -21,10 +21,10 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
             <label>Degree:</label>
             <input
               className="border-2 border-black"
-              name="degree"
+              name="title"
               type="text"
               placeholder="Degree title"
-              value={degree.degree}
+              value={degree.title}
               onChange={handleEducationChange}
             />
           </li>

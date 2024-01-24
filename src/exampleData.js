@@ -31,11 +31,20 @@ const exampleData = {
     {
       id: uuid(),
       school: "University of Helsinki",
-      degree: "Bachelor and Masters of Computer Science",
+      title: "Bachelor of Computer Science",
       startDate: "2017-09-01",
+      endDate: "2020-05-31",
+      description:
+        "In my Bachelor of Computer Science degree, I learned the fundamentals of programming and gained proficiency in various coding languages. I developed a strong understanding of algorithms, data structures, and software engineering principles. Through hands-on projects, I honed my skills in database management, networking, and operating systems. This degree equipped me with the problem-solving and analytical abilities needed to create innovative software solutions.",
+    },
+    {
+      id: uuid(),
+      school: "University of Helsinki",
+      title: "Masters of Computer Science",
+      startDate: "2020-09-01",
       endDate: "2022-12-31",
       description:
-        "During my computer science degree, I acquired a strong foundation in programming, algorithms, and data structures. I gained hands-on experience in software development through projects and coursework. I developed critical thinking and problem-solving skills, and honed my ability to work both independently and as part of a team.",
+        "During my Master's degree in Computer Science with a specialization in web development, I gained advanced knowledge and skills in designing and building dynamic websites and web applications. I deepened my understanding of web technologies such as HTML, CSS, JavaScript, and frameworks like React and Angular. Through in-depth coursework and practical projects, I learned about web security, user experience design, and web performance optimization. This degree equipped me with the expertise to create modern and responsive web solutions that meet industry standards and user needs.",
     },
   ],
   skills: [

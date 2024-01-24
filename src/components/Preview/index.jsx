@@ -2,12 +2,13 @@ import React from "react";
 import PersonalInfo from "./PersonalInfo";
 import ContactInfo from "./ContactInfo";
 import WorkExperience from "./WorkExperience";
+import Education from "./Education";
 
 const Preview = ({
   personalInfo,
   contactInfo,
   workExperience,
-  degrees,
+  education,
   skills,
 }) => {
   return (
@@ -19,6 +20,7 @@ const Preview = ({
           <ContactInfo contactInfo={contactInfo} />
         </div>
         <WorkExperience workExperience={workExperience} />
+        <Education education={education} />
       </div>
     </main>
   );

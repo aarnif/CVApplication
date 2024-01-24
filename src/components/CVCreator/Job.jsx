@@ -13,6 +13,7 @@ const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
               name="position"
               type="text"
               placeholder="Position title"
+              value={job.position}
               onChange={handleWorkExperienceChange}
             />
           </li>
@@ -23,6 +24,7 @@ const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
               name="company"
               type="text"
               placeholder="Company name"
+              value={job.company}
               onChange={handleWorkExperienceChange}
             />
           </li>
@@ -33,6 +35,7 @@ const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
               name="startDate"
               type="date"
               placeholder="Start date"
+              value={job.startDate}
               onChange={handleWorkExperienceChange}
             />
           </li>
@@ -43,6 +46,7 @@ const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
               name="endDate"
               type="date"
               placeholder="End date"
+              value={job.endDate}
               onChange={handleWorkExperienceChange}
             />
           </li>
@@ -53,6 +57,7 @@ const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
               name="description"
               type="text"
               placeholder="A job description."
+              value={job.description}
               onChange={handleWorkExperienceChange}
             />
           </li>

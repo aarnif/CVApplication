@@ -13,6 +13,7 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
               name="school"
               type="text"
               placeholder="School name"
+              value={degree.school}
               onChange={handleEducationChange}
             />
           </li>
@@ -23,6 +24,7 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
               name="degree"
               type="text"
               placeholder="Degree title"
+              value={degree.degree}
               onChange={handleEducationChange}
             />
           </li>
@@ -33,6 +35,7 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
               name="startDate"
               type="date"
               placeholder="Start date"
+              value={degree.startDate}
               onChange={handleEducationChange}
             />
           </li>
@@ -43,6 +46,7 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
               name="endDate"
               type="date"
               placeholder="End date"
+              value={degree.endDate}
               onChange={handleEducationChange}
             />
           </li>
@@ -53,6 +57,7 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
               name="description"
               type="text"
               placeholder="A job description."
+              value={degree.description}
               onChange={handleEducationChange}
             />
           </li>

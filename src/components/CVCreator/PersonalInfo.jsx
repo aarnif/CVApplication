@@ -1,6 +1,6 @@
 import React from "react";
 
-const PersonalInfo = ({ handlePersonalInfoChange }) => {
+const PersonalInfo = ({ personalInfo, handlePersonalInfoChange }) => {
   return (
     <div className="border-2 border-black m-10 p-10">
       <h1 className="text-2xl">Personal Info</h1>
@@ -13,6 +13,7 @@ const PersonalInfo = ({ handlePersonalInfoChange }) => {
               name="firstName"
               type="text"
               placeholder="John"
+              value={personalInfo.firstName}
               onChange={handlePersonalInfoChange}
             />
           </li>
@@ -23,6 +24,7 @@ const PersonalInfo = ({ handlePersonalInfoChange }) => {
               name="lastName"
               type="text"
               placeholder="Doe"
+              value={personalInfo.lastName}
               onChange={handlePersonalInfoChange}
             />
           </li>
@@ -33,6 +35,7 @@ const PersonalInfo = ({ handlePersonalInfoChange }) => {
               name="title"
               type="text"
               placeholder="Developer"
+              value={personalInfo.title}
               onChange={handlePersonalInfoChange}
             />
           </li>
@@ -43,6 +46,7 @@ const PersonalInfo = ({ handlePersonalInfoChange }) => {
               name="description"
               type="text"
               placeholder="A brief description."
+              value={personalInfo.description}
               onChange={handlePersonalInfoChange}
             />
           </li>

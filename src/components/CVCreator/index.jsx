@@ -6,7 +6,10 @@ import Degree from "./Degree";
 import Skill from "./Skill";
 
 const CVCreator = ({
+  handleLoadExample,
+  personalInfo,
   handlePersonalInfoChange,
+  contactInfo,
   handleContactInfoChange,
   workExperience,
   handleWorkExperienceChange,
@@ -24,8 +27,20 @@ const CVCreator = ({
   return (
     <main className="w-2/4 p-20">
       <h1 className="text-2xl">CVCreator</h1>
-      <PersonalInfo handlePersonalInfoChange={handlePersonalInfoChange} />
-      <ContactInfo handleContactInfoChange={handleContactInfoChange} />
+      <button
+        className="border-2 border-black mx-10 mt-5 px-6 py-2"
+        onClick={handleLoadExample}
+      >
+        Load Example
+      </button>
+      <PersonalInfo
+        personalInfo={personalInfo}
+        handlePersonalInfoChange={handlePersonalInfoChange}
+      />
+      <ContactInfo
+        contactInfo={contactInfo}
+        handleContactInfoChange={handleContactInfoChange}
+      />
       {workExperience.map((job, index) => {
         console.log(index);
         return (

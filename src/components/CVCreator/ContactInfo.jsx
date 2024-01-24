@@ -1,6 +1,6 @@
 import React from "react";
 
-const ContactInfo = ({ handleContactInfoChange }) => {
+const ContactInfo = ({ contactInfo, handleContactInfoChange }) => {
   return (
     <div className="border-2 border-black m-10 p-10">
       <h1 className="text-2xl">Contact Info</h1>
@@ -13,6 +13,7 @@ const ContactInfo = ({ handleContactInfoChange }) => {
               name="email"
               type="email"
               placeholder="john.doe@gmail.com"
+              value={contactInfo.email}
               onChange={handleContactInfoChange}
             />
           </li>
@@ -23,6 +24,7 @@ const ContactInfo = ({ handleContactInfoChange }) => {
               name="phone"
               type="phone-number"
               placeholder="0400-123-123"
+              value={contactInfo.phone}
               onChange={handleContactInfoChange}
             />
           </li>
@@ -33,6 +35,7 @@ const ContactInfo = ({ handleContactInfoChange }) => {
               name="location"
               type="text"
               placeholder="Helsinki, Finland"
+              value={contactInfo.location}
               onChange={handleContactInfoChange}
             />
           </li>
@@ -42,7 +45,8 @@ const ContactInfo = ({ handleContactInfoChange }) => {
               className="border-2 border-black"
               name="homePage"
               type="text"
-              placeholder="Helsinki, Finland"
+              placeholder="www.johndoe.com"
+              value={contactInfo.homePage}
               onChange={handleContactInfoChange}
             />
           </li>
@@ -53,6 +57,7 @@ const ContactInfo = ({ handleContactInfoChange }) => {
               name="linkedin"
               type="text"
               placeholder="www.linkedin.com/in/johndoe"
+              value={contactInfo.linkedin}
               onChange={handleContactInfoChange}
             />
           </li>
@@ -63,6 +68,7 @@ const ContactInfo = ({ handleContactInfoChange }) => {
               name="github"
               type="text"
               placeholder="www.github.com/johndoe"
+              value={contactInfo.github}
               onChange={handleContactInfoChange}
             />
           </li>

@@ -7,6 +7,7 @@ import Preview from "./components/Preview/index";
 import { v4 as uuid } from "uuid";
 
 import emptyData from "./emptyData.js";
+import exampleData from "./exampleData.js";
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState(emptyData.personalInfo);
@@ -16,6 +17,15 @@ function App() {
   );
   const [education, setEducation] = useState(emptyData.education);
   const [skills, setSkills] = useState(emptyData.skills);
+
+  const handleLoadExample = () => {
+    console.log("Clicked toggle show example.");
+    setPersonalInfo(exampleData.personalInfo);
+    setContactInfo(exampleData.contactInfo);
+    setWorkExperience(exampleData.workExperience);
+    setEducation(exampleData.education);
+    setSkills(exampleData.skills);
+  };
 
   const handlePersonalInfoChange = (event) => {
     event.preventDefault();
@@ -148,7 +158,10 @@ function App() {
   return (
     <>
       <CVCreator
+        handleLoadExample={handleLoadExample}
+        personalInfo={personalInfo}
         handlePersonalInfoChange={handlePersonalInfoChange}
+        contactInfo={contactInfo}
         handleContactInfoChange={handleContactInfoChange}
         workExperience={workExperience}
         handleWorkExperienceChange={handleWorkExperienceChange}

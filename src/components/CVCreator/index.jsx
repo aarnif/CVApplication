@@ -7,6 +7,7 @@ import Skill from "./Skill";
 
 const CVCreator = ({
   handleLoadExample,
+  handleReset,
   personalInfo,
   handlePersonalInfoChange,
   contactInfo,
@@ -32,6 +33,12 @@ const CVCreator = ({
         onClick={handleLoadExample}
       >
         Load Example
+      </button>
+      <button
+        className="border-2 border-black mx-10 mt-5 px-6 py-2"
+        onClick={handleReset}
+      >
+        Reset CV
       </button>
       <PersonalInfo
         personalInfo={personalInfo}

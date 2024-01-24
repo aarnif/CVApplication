@@ -27,6 +27,15 @@ function App() {
     setSkills(exampleData.skills);
   };
 
+  const handleReset = () => {
+    console.log("Clicked reset CV.");
+    setPersonalInfo(emptyData.personalInfo);
+    setContactInfo(emptyData.contactInfo);
+    setWorkExperience(emptyData.workExperience);
+    setEducation(emptyData.education);
+    setSkills(emptyData.skills);
+  };
+
   const handlePersonalInfoChange = (event) => {
     event.preventDefault();
     console.log("Hande change personal info.");
@@ -159,6 +168,7 @@ function App() {
     <>
       <CVCreator
         handleLoadExample={handleLoadExample}
+        handleReset={handleReset}
         personalInfo={personalInfo}
         handlePersonalInfoChange={handlePersonalInfoChange}
         contactInfo={contactInfo}

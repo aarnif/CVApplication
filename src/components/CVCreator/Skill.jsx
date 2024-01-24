@@ -13,7 +13,7 @@ const Skill = ({ index, id, name, deleteSkill }) => {
           <li className="flex flex-col">
             <button
               className="border-2 border-black m-5 px-6 py-2"
-              onClick={() => deleteSkill(id)}
+              onClick={deleteSkill}
             >
               Delete
             </button>

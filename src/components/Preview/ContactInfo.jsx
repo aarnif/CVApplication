@@ -1,21 +1,16 @@
 import React from "react";
 
-const ContactInfo = ({
-  email,
-  phoneNumber,
-  location,
-  homePage,
-  gitHubProfile,
-}) => {
-  console.log(email);
+const ContactInfo = ({ contactInfo }) => {
+  const { email, phone, location, homePage, linkedin, github } = contactInfo;
   return (
     <>
       <ul>
-        <li>Email: {email.value}</li>
-        <li>Phonenumber: {phoneNumber.value}</li>
-        <li>Location: {location.value}</li>
-        <li>Home page: {homePage.value}</li>
-        <li>GitHub-profile: {gitHubProfile.value}</li>
+        <li>Email: {email}</li>
+        <li>Phonenumber: {phone}</li>
+        <li>Location: {location}</li>
+        <li>Home Page: {homePage}</li>
+        <li>Linkedin Profile: {linkedin}</li>
+        <li>GitHub Profile: {github}</li>
       </ul>
     </>
   );

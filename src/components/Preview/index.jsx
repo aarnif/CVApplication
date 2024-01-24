@@ -3,15 +3,8 @@ import PersonalInfo from "./PersonalInfo";
 import ContactInfo from "./ContactInfo";
 
 const Preview = ({
-  firstName,
-  lastName,
-  title,
-  description,
-  email,
-  phoneNumber,
-  location,
-  homePage,
-  gitHubProfile,
+  personalInfo,
+  contactInfo,
   workExperiences,
   degrees,
   skills,
@@ -20,19 +13,8 @@ const Preview = ({
     <main className="w-2/4 p-20">
       <h1 className="text-2xl">Preview</h1>
       <div className="flex justify-between border-2 border-black m-10 p-10">
-        <PersonalInfo
-          firstName={firstName}
-          lastName={lastName}
-          title={title}
-          description={description}
-        />
-        <ContactInfo
-          email={email}
-          phoneNumber={phoneNumber}
-          location={location}
-          homePage={homePage}
-          gitHubProfile={gitHubProfile}
-        />
+        <PersonalInfo personalInfo={personalInfo} />
+        <ContactInfo contactInfo={contactInfo} />
       </div>
     </main>
   );

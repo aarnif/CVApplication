@@ -1,81 +1,64 @@
 import React from "react";
 import PersonalInfo from "./PersonalInfo";
 import ContactInfo from "./ContactInfo";
-import WorkExperience from "./WorkExperience";
+import Job from "./Job";
 import Degree from "./Degree";
 import Skill from "./Skill";
 
 const CVCreator = ({
-  firstName,
-  lastName,
-  title,
-  description,
-  email,
-  phoneNumber,
-  location,
-  homePage,
-  gitHubProfile,
-  workExperiences,
-  addNewWorkExperience,
-  deleteWorkExperience,
-  degrees,
+  handlePersonalInfoChange,
+  handleContactInfoChange,
+  workExperience,
+  handleWorkExperienceChange,
+  addNewJob,
+  deleteJob,
+  education,
+  handleEducationChange,
   addNewDegree,
   deleteDegree,
   skills,
-  addSkill,
+  handleSkillChange,
+  addNewSkill,
   deleteSkill,
 }) => {
   return (
     <main className="w-2/4 p-20">
       <h1 className="text-2xl">CVCreator</h1>
-      <PersonalInfo
-        firstName={firstName}
-        lastName={lastName}
-        title={title}
-        description={description}
-      />
-      <ContactInfo
-        email={email}
-        phoneNumber={phoneNumber}
-        location={location}
-        homePage={homePage}
-        gitHubProfile={gitHubProfile}
-      />
-      {workExperiences.map((workExperience, index) => {
+      <PersonalInfo handlePersonalInfoChange={handlePersonalInfoChange} />
+      <ContactInfo handleContactInfoChange={handleContactInfoChange} />
+      {workExperience.map((job, index) => {
         console.log(index);
         return (
-          <WorkExperience
-            key={workExperience.id}
-            id={workExperience.id}
+          <Job
+            key={job.id}
+            id={job.id}
             index={index + 1}
-            position={workExperience.position}
-            company={workExperience.company}
-            startDate={workExperience.startDate}
-            endDate={workExperience.endDate}
-            description={workExperience.description}
-            deleteWorkExperience={deleteWorkExperience}
+            job={job}
+            handleWorkExperienceChange={(event) =>
+              handleWorkExperienceChange(event, job.id)
+            }
+            deleteJob={(event) => deleteJob(event, job.id)}
           />
         );
       })}
       <button
         className="border-2 border-black mx-10 px-6 py-2"
-        onClick={addNewWorkExperience}
+        onClick={addNewJob}
       >
-        Add new
+        Add new job
       </button>
-      {degrees.map((degree, index) => {
+      {education.map((degree, index) => {
         console.log(index);
         return (
           <Degree
             key={degree.id}
             id={degree.id}
             index={index + 1}
-            school={degree.school}
-            company={degree.name}
-            startDate={degree.startDate}
-            endDate={degree.endDate}
-            description={degree.description}
-            deleteDegree={deleteDegree}
+            degree={degree}
+            handleEducationChange={(event) =>
+              handleEducationChange(event, degree.id)
+            }
+            deleteDegree={(event) => deleteDegree(event, degree.id)}
           />
         );
       })}
@@ -83,7 +66,7 @@ const CVCreator = ({
         className="border-2 border-black mx-10 px-6 py-2"
         onClick={addNewDegree}
       >
-        Add new
+        Add new degree
       </button>
       {skills.map((skill, index) => {
         console.log(index);
@@ -92,16 +75,17 @@ const CVCreator = ({
             key={skill.id}
             id={skill.id}
             index={index + 1}
-            skill={skill.skill}
-            deleteSkill={deleteSkill}
+            skill={skill}
+            handleSkillChange={(event) => handleSkillChange(event, skill.id)}
+            deleteSkill={(event) => deleteSkill(event, skill.id)}
           />
         );
       })}
       <button
         className="border-2 border-black mx-10 px-6 py-2"
-        onClick={addSkill}
+        onClick={addNewSkill}
       >
-        Add new
+        Add new skill
       </button>
     </main>
   );

@@ -1,29 +1,29 @@
 import React from "react";
 
-const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
+const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
   return (
     <div className="border-2 border-black m-10 p-10">
-      <h1 className="text-2xl">Degree {index}</h1>
+      <h1 className="text-2xl">Work Experience {index}</h1>
       <form>
         <ul>
           <li className="flex flex-col">
-            <label>School:</label>
+            <label>Position:</label>
             <input
               className="border-2 border-black"
-              name="school"
+              name="position"
               type="text"
-              placeholder="School name"
-              onChange={handleEducationChange}
+              placeholder="Position title"
+              onChange={handleWorkExperienceChange}
             />
           </li>
           <li className="flex flex-col">
-            <label>Degree:</label>
+            <label>Company:</label>
             <input
               className="border-2 border-black"
-              name="degree"
+              name="company"
               type="text"
-              placeholder="Degree title"
-              onChange={handleEducationChange}
+              placeholder="Company name"
+              onChange={handleWorkExperienceChange}
             />
           </li>
           <li className="flex flex-col">
@@ -33,7 +33,7 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
               name="startDate"
               type="date"
               placeholder="Start date"
-              onChange={handleEducationChange}
+              onChange={handleWorkExperienceChange}
             />
           </li>
           <li className="flex flex-col">
@@ -43,7 +43,7 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
               name="endDate"
               type="date"
               placeholder="End date"
-              onChange={handleEducationChange}
+              onChange={handleWorkExperienceChange}
             />
           </li>
           <li className="flex flex-col">
@@ -53,13 +53,13 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
               name="description"
               type="text"
               placeholder="A job description."
-              onChange={handleEducationChange}
+              onChange={handleWorkExperienceChange}
             />
           </li>
           <li className="flex flex-col">
             <button
               className="border-2 border-black m-5 px-6 py-2"
-              onClick={deleteDegree}
+              onClick={deleteJob}
             >
               Delete
             </button>
@@ -70,4 +70,4 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
   );
 };
 
-export default Degree;
+export default Job;

@@ -15,32 +15,9 @@ const emptyData = {
     linkedin: "",
     github: "",
   },
-  workExperience: [
-    {
-      id: uuid(),
-      position: "",
-      company: "",
-      startDate: "",
-      endDate: "",
-      description: "",
-    },
-  ],
-  education: [
-    {
-      id: uuid(),
-      school: "",
-      degree: "",
-      startDate: "",
-      endDate: "",
-      description: "",
-    },
-  ],
-  skills: [
-    {
-      id: uuid(),
-      name: "",
-    },
-  ],
+  workExperience: [],
+  education: [],
+  skills: [],
 };
 
 export default emptyData;

@@ -3,6 +3,7 @@ import PersonalInfo from "./PersonalInfo";
 import ContactInfo from "./ContactInfo";
 import WorkExperience from "./WorkExperience";
 import Education from "./Education";
+import Skills from "./Skills";
 
 const Preview = ({
   personalInfo,
@@ -21,6 +22,7 @@ const Preview = ({
         </div>
         <WorkExperience workExperience={workExperience} />
         <Education education={education} />
+        <Skills skills={skills} />
       </div>
     </main>
   );

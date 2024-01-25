@@ -2,8 +2,8 @@ import React from "react";
 
 const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
   return (
-    <div className="border-2 border-black m-10 p-10">
-      <h1 className="text-2xl">Degree {index}</h1>
+    <>
+      <h2 className="text-xl pt-5">Degree {index}</h2>
       <form>
         <ul>
           <li className="flex flex-col">
@@ -71,7 +71,7 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
           </li>
         </ul>
       </form>
-    </div>
+    </>
   );
 };
 

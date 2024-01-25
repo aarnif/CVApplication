@@ -2,8 +2,8 @@ import React from "react";
 
 const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
   return (
-    <div className="border-2 border-black m-10 p-10">
-      <h1 className="text-2xl">Work Experience {index}</h1>
+    <>
+      <h2 className="text-xl pt-5">Job {index}</h2>
       <form>
         <ul>
           <li className="flex flex-col">
@@ -71,7 +71,7 @@ const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
           </li>
         </ul>
       </form>
-    </div>
+    </>
   );
 };
 

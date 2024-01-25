@@ -2,8 +2,8 @@ import React from "react";
 
 const Skill = ({ index, id, skill, handleSkillChange, deleteSkill }) => {
   return (
-    <div className="border-2 border-black m-10 p-10">
-      <h1 className="text-2xl">Skill {index}</h1>
+    <>
+      <h2 className="text-xl pt-5">Skill {index}</h2>
       <form>
         <ul>
           <li className="flex flex-col">
@@ -27,7 +27,7 @@ const Skill = ({ index, id, skill, handleSkillChange, deleteSkill }) => {
           </li>
         </ul>
       </form>
-    </div>
+    </>
   );
 };
 

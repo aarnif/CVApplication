@@ -2,12 +2,8 @@ import React from "react";
 import Skill from "./Skill";
 
 const Skills = ({ skills }) => {
-  if (skills.length === 0) {
-    return null;
-  }
-
   return (
-    <div className="p-10">
+    <div className="pt-5">
       <h1 className="text-2xl border-b-2 border-black">Skills</h1>
       <ul className="list-disc columns-2 px-10">
         {skills.map((skill) => (

@@ -10,4 +10,6 @@ body {
 #root {
   display: flex;
   justify-content: space-between;
+  padding: 50px 300px 50px 300px;
+  max-height: 100vh;
 }

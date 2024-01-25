@@ -13,10 +13,9 @@ const Preview = ({
   skills,
 }) => {
   return (
-    <main className="w-2/4 p-20">
-      <h1 className="text-2xl">Preview</h1>
-      <div className="flex flex-col border-2 border-black m-10 p-10">
-        <div className="flex justify-between p-10">
+    <main className="">
+      <div className="w-[850px] h-[1199px] border-2 border-black p-14">
+        <div className="flex justify-between">
           <PersonalInfo personalInfo={personalInfo} />
           <ContactInfo contactInfo={contactInfo} />
         </div>

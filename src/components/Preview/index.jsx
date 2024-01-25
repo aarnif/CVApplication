@@ -15,13 +15,13 @@ const Preview = ({
   return (
     <main className="">
       <div className="w-[850px] h-[1199px] border-2 border-black p-14">
-        <div className="flex justify-between">
-          <PersonalInfo personalInfo={personalInfo} />
-          <ContactInfo contactInfo={contactInfo} />
-        </div>
+        <PersonalInfo personalInfo={personalInfo} />
         <WorkExperience workExperience={workExperience} />
         <Education education={education} />
-        <Skills skills={skills} />
+        <div className="flex justify-between">
+          <Skills skills={skills} />
+          <ContactInfo contactInfo={contactInfo} />
+        </div>
       </div>
     </main>
   );

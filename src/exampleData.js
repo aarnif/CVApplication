@@ -1,4 +1,5 @@
 import { v4 as uuid } from "uuid";
+import Image from "./assets/images/spider-man.png";
 
 const exampleData = {
   personalInfo: {
@@ -6,7 +7,8 @@ const exampleData = {
     lastName: "Doe",
     title: "Developer",
     description:
-      "Experienced software developer with a proven track record of designing and developing scalable applications. Proficient in multiple programming languages and frameworks, I excel in problem-solving and collaborating with cross-functional teams to deliver high-quality software solutions. Committed to continuous learning and staying updated with the latest industry trends.",
+      "Experienced software developer proficient in multiple programming languages, with a strong background in developing and implementing innovative solutions. Skilled in problem-solving, collaborating with teams, and delivering high-quality code to meet project requirements and deadlines.",
+    image: Image,
   },
   contactInfo: {
     email: "john.doe@gmail.com",

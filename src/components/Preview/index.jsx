@@ -1,5 +1,5 @@
 import React from "react";
-import PersonalInfo from "./PersonalInfo";
+import PersonalInfo from "./Personalnfo/index";
 import ContactInfo from "./ContactInfo";
 import WorkExperience from "./WorkExperience";
 import Education from "./Education";
@@ -13,8 +13,8 @@ const Preview = ({
   skills,
 }) => {
   return (
-    <main className="">
-      <div className="w-[850px] h-[1199px] border-2 border-black p-14">
+    <main className="px-40">
+      <div className="w-[800px] h-[1128px] border-2 border-black p-12">
         <PersonalInfo personalInfo={personalInfo} />
         <WorkExperience workExperience={workExperience} />
         <Education education={education} />

@@ -52,6 +52,16 @@ const PersonalInfo = ({ personalInfo, handlePersonalInfoChange }) => {
             onChange={handlePersonalInfoChange}
           />
         </li>
+        <li className="flex flex-col">
+          <label>Image:</label>
+          <input
+            className="border-2 border-black"
+            name="image"
+            type="file"
+            placeholder="Load image from file."
+            onChange={handlePersonalInfoChange}
+          />
+        </li>
       </ul>
     </form>
   );

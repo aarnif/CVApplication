@@ -27,7 +27,7 @@ const CVCreator = ({
   deleteSkill,
 }) => {
   return (
-    <main className="min-w-[500px] overflow-y-scroll">
+    <main className="min-w-[500px] flex-grow overflow-y-scroll">
       <h1 className="text-2xl">CVCreator</h1>
       <button
         className="border-2 border-black mx-10 mt-5 px-6 py-2"

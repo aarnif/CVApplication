@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 import CVCreator from "./components/CVCreator/index";
@@ -42,7 +42,10 @@ function App() {
 
     const newPersonalInfo = {
       ...personalInfo,
-      [event.target.name]: event.target.value,
+      [event.target.name]:
+        event.target.name === "image"
+          ? URL.createObjectURL(event.target.files[0])
+          : event.target.value,
     };
 
     setPersonalInfo(newPersonalInfo);
@@ -163,6 +166,8 @@ function App() {
     const newSkills = skills.filter((skill) => skill.id !== skillId);
     setSkills(newSkills);
   };
+
+  console.log(personalInfo);
 
   return (
     <>

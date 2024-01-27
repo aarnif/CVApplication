@@ -5,7 +5,7 @@ const Skill = ({ skill }) => {
 
   return (
     <div className="pt-5 pb-2">
-      <h1 className="text-lg">{name}</h1>
+      <h1 className="text-base">{name}</h1>
     </div>
   );
 };

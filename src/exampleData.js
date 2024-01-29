@@ -9,6 +9,7 @@ const exampleData = {
     description:
       "Experienced software developer proficient in multiple programming languages, with a strong background in developing and implementing innovative solutions. Skilled in problem-solving, collaborating with teams, and delivering high-quality code to meet project requirements and deadlines.",
     image: Image,
+    imageFileName: Image.replace(/^.*[\\/]/, ""),
   },
   contactInfo: {
     email: "john.doe@gmail.com",

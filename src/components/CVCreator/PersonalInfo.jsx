@@ -1,8 +1,4 @@
 import React from "react";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const PersonalInfo = ({ personalInfo, handlePersonalInfoChange }) => {
   return (
@@ -53,14 +49,26 @@ const PersonalInfo = ({ personalInfo, handlePersonalInfoChange }) => {
           />
         </li>
         <li className="flex flex-col">
-          <label>Image:</label>
-          <input
-            className="border-2 border-black"
-            name="image"
-            type="file"
-            placeholder="Load image from file."
-            onChange={handlePersonalInfoChange}
-          />
+          <label>
+            Image:
+            <input
+              className="hidden"
+              name="image"
+              type="file"
+              placeholder="Load image from file."
+              onChange={handlePersonalInfoChange}
+            />
+            <div type="button" className="flex border-2 border-black">
+              <div className="border-2 border-black m-2 p-2 cursor-pointer">
+                Profile Image
+              </div>
+              <div className="m-2 p-2 pointer-events-none">
+                {personalInfo.image
+                  ? personalInfo.imageFileName
+                  : "Upload image from file."}
+              </div>
+            </div>
+          </label>
         </li>
       </ul>
     </form>

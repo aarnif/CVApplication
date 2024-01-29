@@ -7,6 +7,7 @@ const emptyData = {
     title: "",
     description: "",
     image: "",
+    imageFileName: "",
   },
   contactInfo: {
     email: "",

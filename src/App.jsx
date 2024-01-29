@@ -39,13 +39,22 @@ function App() {
   const handlePersonalInfoChange = (event) => {
     event.preventDefault();
     console.log("Hande change personal info.");
+    // console.log(event.target?.files[0]);
+
+    if (event.target.name === "image") {
+      const newPersonalInfo = {
+        ...personalInfo,
+        [event.target.name]: URL.createObjectURL(event.target.files[0]),
+        imageFileName: event.target.files[0].name,
+      };
+
+      setPersonalInfo(newPersonalInfo);
+      return;
+    }
 
     const newPersonalInfo = {
       ...personalInfo,
-      [event.target.name]:
-        event.target.name === "image"
-          ? URL.createObjectURL(event.target.files[0])
-          : event.target.value,
+      [event.target.name]: event.target.value,
     };
 
     setPersonalInfo(newPersonalInfo);

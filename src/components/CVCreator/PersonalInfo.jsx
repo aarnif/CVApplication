@@ -1,74 +1,65 @@
 import React from "react";
+import InputField from "../InputField";
+import TextAreaField from "../TextAreaField";
+import ProfilePic from "../ProfilePic";
 
 const PersonalInfo = ({ personalInfo, handlePersonalInfoChange }) => {
   return (
     <form>
       <ul>
         <li className="flex flex-col">
-          <label>First Name:</label>
-          <input
-            className="border-2 border-black"
-            name="firstName"
-            type="text"
-            placeholder="John"
-            value={personalInfo.firstName}
-            onChange={handlePersonalInfoChange}
+          <InputField
+            labelName={"First Name:"}
+            inputName={"firstName"}
+            inputType={"text"}
+            placeholder={"John"}
+            inputValue={personalInfo.firstName}
+            onChangeFunction={handlePersonalInfoChange}
           />
         </li>
         <li className="flex flex-col">
-          <label>Last Name:</label>
-          <input
-            className="border-2 border-black"
-            name="lastName"
-            type="text"
-            placeholder="Doe"
-            value={personalInfo.lastName}
-            onChange={handlePersonalInfoChange}
+          <InputField
+            labelName={"Last Name:"}
+            inputName={"lastName"}
+            inputType={"text"}
+            placeholder={"Doe"}
+            inputValue={personalInfo.lastName}
+            onChangeFunction={handlePersonalInfoChange}
           />
         </li>
         <li className="flex flex-col">
-          <label>Title:</label>
-          <input
-            className="border-2 border-black"
-            name="title"
-            type="text"
-            placeholder="Developer"
-            value={personalInfo.title}
-            onChange={handlePersonalInfoChange}
+          <InputField
+            labelName={"Title:"}
+            inputName={"title"}
+            inputType={"text"}
+            placeholder={"Developer"}
+            inputValue={personalInfo.title}
+            onChangeFunction={handlePersonalInfoChange}
           />
         </li>
         <li className="flex flex-col">
-          <label>Description:</label>
-          <textarea
-            className="border-2 border-black"
-            name="description"
-            type="text"
-            placeholder="A brief description."
-            value={personalInfo.description}
-            onChange={handlePersonalInfoChange}
+          <TextAreaField
+            labelName={"Description:"}
+            inputName={"description"}
+            inputType={"text"}
+            placeholder={"A brief description."}
+            inputValue={personalInfo.description}
+            onChangeFunction={handlePersonalInfoChange}
           />
         </li>
         <li className="flex flex-col">
-          <label>
-            Image:
-            <input
-              className="hidden"
-              name="image"
-              type="file"
-              placeholder="Load image from file."
-              onChange={handlePersonalInfoChange}
-            />
-            <div type="button" className="flex border-2 border-black">
-              <div className="border-2 border-black m-2 p-2 cursor-pointer">
-                Profile Image
-              </div>
-              <div className="m-2 p-2 pointer-events-none">
-                {personalInfo.image
-                  ? personalInfo.imageFileName
-                  : "Upload image from file."}
-              </div>
-            </div>
-          </label>
+          <ProfilePic
+            labelName={"Image:"}
+            inputName={"image"}
+            inputType={"file"}
+            placeholder={"Load image from file."}
+            onChangeFunction={handlePersonalInfoChange}
+            text={
+              personalInfo.image
+                ? personalInfo.imageFileName
+                : "Upload image from file."
+            }
+          />
         </li>
       </ul>
     </form>

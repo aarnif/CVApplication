@@ -1,5 +1,7 @@
 import React from "react";
 import Button from "../Button";
+import InputField from "../InputField";
+import TextAreaField from "../TextAreaField";
 
 const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
   return (
@@ -8,58 +10,53 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
       <form>
         <ul>
           <li className="flex flex-col">
-            <label>School:</label>
-            <input
-              className="border-2 border-black"
-              name="school"
-              type="text"
-              placeholder="School name"
-              value={degree.school}
-              onChange={handleEducationChange}
+            <InputField
+              labelName={"School:"}
+              inputName={"school"}
+              inputType={"text"}
+              placeholder={"School name"}
+              inputValue={degree.school}
+              onChangeFunction={handleEducationChange}
             />
           </li>
           <li className="flex flex-col">
-            <label>Degree:</label>
-            <input
-              className="border-2 border-black"
-              name="title"
-              type="text"
-              placeholder="Degree title"
-              value={degree.title}
-              onChange={handleEducationChange}
+            <InputField
+              labelName={"Degree:"}
+              inputName={"title"}
+              inputType={"text"}
+              placeholder={"Degree title"}
+              inputValue={degree.title}
+              onChangeFunction={handleEducationChange}
             />
           </li>
           <li className="flex flex-col">
-            <label>Start date:</label>
-            <input
-              className="border-2 border-black"
-              name="startDate"
-              type="date"
-              placeholder="Start date"
-              value={degree.startDate}
-              onChange={handleEducationChange}
+            <InputField
+              labelName={"Start date:"}
+              inputName={"startDate"}
+              inputType={"date"}
+              placeholder={"Start date"}
+              inputValue={degree.startDate}
+              onChangeFunction={handleEducationChange}
             />
           </li>
           <li className="flex flex-col">
-            <label>End date:</label>
-            <input
-              className="border-2 border-black"
-              name="endDate"
-              type="date"
-              placeholder="End date"
-              value={degree.endDate}
-              onChange={handleEducationChange}
+            <InputField
+              labelName={"End date:"}
+              inputName={"endDate"}
+              inputType={"date"}
+              placeholder={"End date"}
+              inputValue={degree.endDate}
+              onChangeFunction={handleEducationChange}
             />
           </li>
           <li className="flex flex-col">
-            <label>Description:</label>
-            <textarea
-              className="border-2 border-black"
-              name="description"
-              type="text"
-              placeholder="A job description."
-              value={degree.description}
-              onChange={handleEducationChange}
+            <TextAreaField
+              labelName={"Description:"}
+              inputName={"description"}
+              inputType={"text"}
+              placeholder={"A job description."}
+              inputValue={degree.description}
+              onChangeFunction={handleEducationChange}
             />
           </li>
           <li className="flex justify-end">

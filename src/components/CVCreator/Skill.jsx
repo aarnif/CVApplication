@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button";
+import InputField from "../InputField";
 
 const Skill = ({ index, id, skill, handleSkillChange, deleteSkill }) => {
   return (
@@ -8,14 +9,13 @@ const Skill = ({ index, id, skill, handleSkillChange, deleteSkill }) => {
       <form>
         <ul>
           <li className="flex flex-col">
-            <label>Add a skill:</label>
-            <input
-              className="border-2 border-black"
-              name="name"
-              type="text"
-              placeholder="Skill name"
-              value={skill.name}
-              onChange={handleSkillChange}
+            <InputField
+              labelName={"Add a skill:"}
+              inputName={"name"}
+              inputType={"text"}
+              placeholder={"Skill name"}
+              inputValue={skill.name}
+              onChangeFunction={handleSkillChange}
             />
           </li>
           <li className="flex justify-end">

@@ -6,6 +6,14 @@ import Degree from "./Degree";
 import Skill from "./Skill";
 import Togglable from "../Togglable";
 import Button from "../Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faAddressCard,
+  faUserTie,
+  faUserGraduate,
+  faUserGear,
+} from "@fortawesome/free-solid-svg-icons";
 
 const CVCreator = ({
   handleLoadExample,
@@ -42,19 +50,28 @@ const CVCreator = ({
           buttonText={"Reset CV"}
         />
       </div>
-      <Togglable header={"Personal Info"}>
+      <Togglable
+        icon={<FontAwesomeIcon icon={faUser} size={"xl"} />}
+        header={"Personal Info"}
+      >
         <PersonalInfo
           personalInfo={personalInfo}
           handlePersonalInfoChange={handlePersonalInfoChange}
         />
       </Togglable>
-      <Togglable header={"Contact Info"}>
+      <Togglable
+        icon={<FontAwesomeIcon icon={faAddressCard} size={"xl"} />}
+        header={"Contact Info"}
+      >
         <ContactInfo
           contactInfo={contactInfo}
           handleContactInfoChange={handleContactInfoChange}
         />
       </Togglable>
-      <Togglable header={"Work Experience"}>
+      <Togglable
+        icon={<FontAwesomeIcon icon={faUserTie} size={"xl"} />}
+        header={"Work Experience"}
+      >
         {workExperience.length === 0 ? (
           <h2 className="text-xl pt-5">No jobs added.</h2>
         ) : (
@@ -75,7 +92,10 @@ const CVCreator = ({
         )}
         <Button onClickFunction={addNewJob} buttonText={"Add new job"} />
       </Togglable>
-      <Togglable header={"Education"}>
+      <Togglable
+        icon={<FontAwesomeIcon icon={faUserGraduate} size={"xl"} />}
+        header={"Education"}
+      >
         {education.length === 0 ? (
           <h2 className="text-xl pt-5">No degrees added.</h2>
         ) : (
@@ -96,7 +116,10 @@ const CVCreator = ({
         )}
         <Button onClickFunction={addNewDegree} buttonText={"Add new degree"} />
       </Togglable>
-      <Togglable header={"Skills"}>
+      <Togglable
+        icon={<FontAwesomeIcon icon={faUserGear} size={"xl"} />}
+        header={"Skills"}
+      >
         {skills.length === 0 ? (
           <h2 className="text-xl pt-5">No skills added.</h2>
         ) : (

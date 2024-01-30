@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const Togglable = (props) => {
   const [visible, setVisible] = useState(false);
@@ -15,28 +14,29 @@ const Togglable = (props) => {
 
   return (
     <div className="bg-white shadow-lg rounded-lg m-10 p-10">
-      <div
-        style={hideWhenVisible}
-        className="flex justify-between content-center"
-      >
-        <h1 className="text-2xl">{props.header}</h1>
-        <FontAwesomeIcon
-          icon={faAngleUp}
-          onClick={toggleVisibility}
-          className="self-center"
-        />
-      </div>
-      <div style={showWhenVisible}>
-        <div className="flex justify-between content-center">
-          <h1 className="text-2xl">{props.header}</h1>
+      <ul className="flex items-center">
+        <li className="mt-2 mb-2 mr-4">{props.icon}</li>
+        <li className="mt-2 mb-2 mr-4">
+          <h1 className="text-2xl font-bold">{props.header}</h1>
+        </li>
+        <li style={hideWhenVisible} className="m-auto mr-0">
           <FontAwesomeIcon
+            className="cursor-pointer"
             icon={faAngleDown}
+            size={"lg"}
             onClick={toggleVisibility}
-            className="self-center"
           />
-        </div>
-        {props.children}
-      </div>
+        </li>
+        <li style={showWhenVisible} className="m-auto mr-0">
+          <FontAwesomeIcon
+            className="cursor-pointer"
+            icon={faAngleUp}
+            size={"lg"}
+            onClick={toggleVisibility}
+          />
+        </li>
+      </ul>
+      <div style={showWhenVisible}>{props.children}</div>
     </div>
   );
 };

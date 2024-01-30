@@ -1,5 +1,7 @@
 import React from "react";
 import Button from "../Button";
+import InputField from "../InputField";
+import TextAreaField from "../TextAreaField";
 
 const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
   return (
@@ -8,58 +10,52 @@ const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
       <form>
         <ul>
           <li className="flex flex-col">
-            <label>Position:</label>
-            <input
-              className="border-2 border-black"
-              name="position"
-              type="text"
-              placeholder="Position title"
-              value={job.position}
-              onChange={handleWorkExperienceChange}
+            <InputField
+              labelName={"Position:"}
+              inputName={"position"}
+              inputType={"text"}
+              placeholder={"Position title"}
+              inputValue={job.position}
+              onChangeFunction={handleWorkExperienceChange}
             />
           </li>
           <li className="flex flex-col">
-            <label>Company:</label>
-            <input
-              className="border-2 border-black"
-              name="company"
-              type="text"
-              placeholder="Company name"
-              value={job.company}
-              onChange={handleWorkExperienceChange}
+            <InputField
+              labelName={"Company:"}
+              inputName={"company"}
+              inputType={"text"}
+              placeholder={"Company name"}
+              inputValue={job.company}
+              onChangeFunction={handleWorkExperienceChange}
             />
           </li>
           <li className="flex flex-col">
-            <label>Start date:</label>
-            <input
-              className="border-2 border-black"
-              name="startDate"
-              type="date"
-              placeholder="Start date"
-              value={job.startDate}
-              onChange={handleWorkExperienceChange}
+            <InputField
+              labelName={"Start date:"}
+              inputName={"startDate"}
+              inputType={"date"}
+              placeholder={"Start date"}
+              inputValue={job.startDate}
+              onChangeFunction={handleWorkExperienceChange}
             />
           </li>
           <li className="flex flex-col">
-            <label>End date:</label>
-            <input
-              className="border-2 border-black"
-              name="endDate"
-              type="date"
-              placeholder="End date"
-              value={job.endDate}
-              onChange={handleWorkExperienceChange}
+            <InputField
+              labelName={"End date:"}
+              inputName={"endDate"}
+              inputType={"date"}
+              placeholder={"End date"}
+              inputValue={job.endDate}
+              onChangeFunction={handleWorkExperienceChange}
             />
           </li>
           <li className="flex flex-col">
-            <label>Description:</label>
-            <textarea
-              className="border-2 border-black"
-              name="description"
-              type="text"
-              placeholder="A job description."
-              value={job.description}
-              onChange={handleWorkExperienceChange}
+            <TextAreaField
+              labelName={"Description:"}
+              inputName={"description"}
+              placeholder={"A job description."}
+              inputValue={job.description}
+              onChangeFunction={handleWorkExperienceChange}
             />
           </li>
           <li className="flex justify-end">

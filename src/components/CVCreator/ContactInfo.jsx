@@ -1,73 +1,68 @@
 import React from "react";
+import InputField from "../InputField";
 
 const ContactInfo = ({ contactInfo, handleContactInfoChange }) => {
   return (
     <form>
       <ul>
         <li className="flex flex-col">
-          <label>Email Address:</label>
-          <input
-            className="border-2 border-black"
-            name="email"
-            type="email"
-            placeholder="john.doe@gmail.com"
-            value={contactInfo.email}
-            onChange={handleContactInfoChange}
+          <InputField
+            labelName={"Email Address:"}
+            inputName={"email"}
+            inputType={"email"}
+            placeholder={"john.doe@gmail.com"}
+            inputValue={contactInfo.email}
+            onChangeFunction={handleContactInfoChange}
           />
         </li>
         <li className="flex flex-col">
-          <label>Phone Number:</label>
-          <input
-            className="border-2 border-black"
-            name="phone"
-            type="phone-number"
-            placeholder="0400-123-123"
-            value={contactInfo.phone}
-            onChange={handleContactInfoChange}
+          <InputField
+            labelName={"Phone Number:"}
+            inputName={"phone"}
+            inputType={"phone-number"}
+            placeholder={"0400-123-123"}
+            inputValue={contactInfo.phone}
+            onChangeFunction={handleContactInfoChange}
           />
         </li>
         <li className="flex flex-col">
-          <label>Location:</label>
-          <input
-            className="border-2 border-black"
-            name="location"
-            type="text"
-            placeholder="Helsinki, Finland"
-            value={contactInfo.location}
-            onChange={handleContactInfoChange}
+          <InputField
+            labelName={"Location:"}
+            inputName={"location"}
+            inputType={"text"}
+            placeholder={"Helsinki, Finland"}
+            inputValue={contactInfo.location}
+            onChangeFunction={handleContactInfoChange}
           />
         </li>
         <li className="flex flex-col">
-          <label>Home Page:</label>
-          <input
-            className="border-2 border-black"
-            name="homePage"
-            type="text"
-            placeholder="www.johndoe.com"
-            value={contactInfo.homePage}
-            onChange={handleContactInfoChange}
+          <InputField
+            labelName={"Home Page:"}
+            inputName={"homePage"}
+            inputType={"text"}
+            placeholder={"www.johndoe.com"}
+            inputValue={contactInfo.homePage}
+            onChangeFunction={handleContactInfoChange}
           />
         </li>
         <li className="flex flex-col">
-          <label>LinkedIn Profile:</label>
-          <input
-            className="border-2 border-black"
-            name="linkedin"
-            type="text"
-            placeholder="www.linkedin.com/in/johndoe"
-            value={contactInfo.linkedin}
-            onChange={handleContactInfoChange}
+          <InputField
+            labelName={"LinkedIn Profile:"}
+            inputName={"linkedin"}
+            inputType={"text"}
+            placeholder={"www.linkedin.com/in/johndoe"}
+            inputValue={contactInfo.linkedin}
+            onChangeFunction={handleContactInfoChange}
           />
         </li>
         <li className="flex flex-col">
-          <label>GitHub Profile:</label>
-          <input
-            className="border-2 border-black"
-            name="github"
-            type="text"
-            placeholder="www.github.com/johndoe"
-            value={contactInfo.github}
-            onChange={handleContactInfoChange}
+          <InputField
+            labelName={"GitHub Profile:"}
+            inputName={"github"}
+            inputType={"text"}
+            placeholder={"www.github.com/johndoe"}
+            inputValue={contactInfo.github}
+            onChangeFunction={handleContactInfoChange}
           />
         </li>
       </ul>

@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header.jsx";
 import CVCreator from "./components/CVCreator/index";
 import Preview from "./components/Preview/index";
+import Footer from "./components/Footer.jsx";
 
 import { v4 as uuid } from "uuid";
 
@@ -211,6 +212,7 @@ function App() {
           skills={skills}
         />
       </main>
+      <Footer />
     </>
   );
 }

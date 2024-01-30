@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
+import Header from "./components/Header.jsx";
 import CVCreator from "./components/CVCreator/index";
 import Preview from "./components/Preview/index";
 
@@ -180,33 +181,36 @@ function App() {
 
   return (
     <>
-      <CVCreator
-        handleLoadExample={handleLoadExample}
-        handleReset={handleReset}
-        personalInfo={personalInfo}
-        handlePersonalInfoChange={handlePersonalInfoChange}
-        contactInfo={contactInfo}
-        handleContactInfoChange={handleContactInfoChange}
-        workExperience={workExperience}
-        handleWorkExperienceChange={handleWorkExperienceChange}
-        addNewJob={addNewJob}
-        deleteJob={deleteJob}
-        education={education}
-        handleEducationChange={handleEducationChange}
-        addNewDegree={addNewDegree}
-        deleteDegree={deleteDegree}
-        skills={skills}
-        handleSkillChange={handleSkillChange}
-        addNewSkill={addNewSkill}
-        deleteSkill={deleteSkill}
-      />
-      <Preview
-        personalInfo={personalInfo}
-        contactInfo={contactInfo}
-        workExperience={workExperience}
-        education={education}
-        skills={skills}
-      />
+      <Header />
+      <main className="flex">
+        <CVCreator
+          handleLoadExample={handleLoadExample}
+          handleReset={handleReset}
+          personalInfo={personalInfo}
+          handlePersonalInfoChange={handlePersonalInfoChange}
+          contactInfo={contactInfo}
+          handleContactInfoChange={handleContactInfoChange}
+          workExperience={workExperience}
+          handleWorkExperienceChange={handleWorkExperienceChange}
+          addNewJob={addNewJob}
+          deleteJob={deleteJob}
+          education={education}
+          handleEducationChange={handleEducationChange}
+          addNewDegree={addNewDegree}
+          deleteDegree={deleteDegree}
+          skills={skills}
+          handleSkillChange={handleSkillChange}
+          addNewSkill={addNewSkill}
+          deleteSkill={deleteSkill}
+        />
+        <Preview
+          personalInfo={personalInfo}
+          contactInfo={contactInfo}
+          workExperience={workExperience}
+          education={education}
+          skills={skills}
+        />
+      </main>
     </>
   );
 }

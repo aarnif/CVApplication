@@ -10,6 +10,7 @@ body {
 
 #root {
   display: flex;
-  padding: 50px 300px 50px 300px;
+  flex-direction: column;
+  padding: 30px 300px 30px 300px;
   max-height: 100vh;
 }

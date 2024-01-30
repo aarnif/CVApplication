@@ -37,7 +37,6 @@ const CVCreator = ({
 }) => {
   return (
     <main className="min-w-[500px] flex-grow overflow-y-scroll">
-      <h1 className="text-2xl">CVCreator</h1>
       <div className="flex justify-between">
         <Button
           customStyle={{ marginTop: 10, marginLeft: 40, marginRight: 40 }}

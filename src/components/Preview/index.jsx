@@ -14,7 +14,7 @@ const Preview = ({
 }) => {
   return (
     <main className="px-40">
-      <div className="w-[800px] h-[1128px] border-2 border-black p-12">
+      <div className="w-[800px] h-[1128px] bg-white shadow-lg p-12">
         <PersonalInfo personalInfo={personalInfo} />
         <WorkExperience workExperience={workExperience} />
         <Education education={education} />

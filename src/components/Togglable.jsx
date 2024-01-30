@@ -14,7 +14,7 @@ const Togglable = (props) => {
   };
 
   return (
-    <div className="border-2 border-black m-10 p-10">
+    <div className="bg-white shadow-lg rounded-lg m-10 p-10">
       <div
         style={hideWhenVisible}
         className="flex justify-between content-center"

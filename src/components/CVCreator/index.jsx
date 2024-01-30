@@ -5,6 +5,7 @@ import Job from "./Job";
 import Degree from "./Degree";
 import Skill from "./Skill";
 import Togglable from "../Togglable";
+import Button from "../Button";
 
 const CVCreator = ({
   handleLoadExample,
@@ -29,18 +30,18 @@ const CVCreator = ({
   return (
     <main className="min-w-[500px] flex-grow overflow-y-scroll">
       <h1 className="text-2xl">CVCreator</h1>
-      <button
-        className="border-2 border-black mx-10 mt-5 px-6 py-2"
-        onClick={handleLoadExample}
-      >
-        Load Example
-      </button>
-      <button
-        className="border-2 border-black mx-10 mt-5 px-6 py-2"
-        onClick={handleReset}
-      >
-        Reset CV
-      </button>
+      <div className="flex justify-between">
+        <Button
+          customStyle={{ marginTop: 10, marginLeft: 40, marginRight: 40 }}
+          onClickFunction={handleLoadExample}
+          buttonText={"Load Example"}
+        />
+        <Button
+          customStyle={{ marginTop: 10, marginLeft: 40, marginRight: 40 }}
+          onClickFunction={handleReset}
+          buttonText={"Reset CV"}
+        />
+      </div>
       <Togglable header={"Personal Info"}>
         <PersonalInfo
           personalInfo={personalInfo}
@@ -72,13 +73,8 @@ const CVCreator = ({
             );
           })
         )}
+        <Button onClickFunction={addNewJob} buttonText={"Add new job"} />
       </Togglable>
-      <button
-        className="border-2 border-black mx-10 px-6 py-2"
-        onClick={addNewJob}
-      >
-        Add new job
-      </button>
       <Togglable header={"Education"}>
         {education.length === 0 ? (
           <h2 className="text-xl pt-5">No degrees added.</h2>
@@ -98,13 +94,8 @@ const CVCreator = ({
             );
           })
         )}
+        <Button onClickFunction={addNewDegree} buttonText={"Add new degree"} />
       </Togglable>
-      <button
-        className="border-2 border-black mx-10 px-6 py-2"
-        onClick={addNewDegree}
-      >
-        Add new degree
-      </button>
       <Togglable header={"Skills"}>
         {skills.length === 0 ? (
           <h2 className="text-xl pt-5">No skills added.</h2>
@@ -124,13 +115,8 @@ const CVCreator = ({
             );
           })
         )}
+        <Button onClickFunction={addNewSkill} buttonText={"Add new skill"} />
       </Togglable>
-      <button
-        className="border-2 border-black mx-10 px-6 py-2"
-        onClick={addNewSkill}
-      >
-        Add new skill
-      </button>
     </main>
   );
 };

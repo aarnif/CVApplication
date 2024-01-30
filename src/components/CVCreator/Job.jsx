@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button";
 
 const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
   return (
@@ -61,13 +62,12 @@ const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
               onChange={handleWorkExperienceChange}
             />
           </li>
-          <li className="flex flex-col">
-            <button
-              className="border-2 border-black m-5 px-6 py-2"
-              onClick={deleteJob}
-            >
-              Delete
-            </button>
+          <li className="flex justify-end">
+            <Button
+              customStyle={{ marginTop: 20, marginBottom: 20 }}
+              buttonText={"Delete"}
+              onClickFunction={deleteJob}
+            />
           </li>
         </ul>
       </form>

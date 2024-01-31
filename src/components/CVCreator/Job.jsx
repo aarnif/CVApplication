@@ -1,9 +1,12 @@
-import React from "react";
+import { useState } from "react";
 import Button from "../Button";
 import InputField from "../InputField";
 import TextAreaField from "../TextAreaField";
+import ConfirmBox from "../ConfirmBox";
 
 const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
+  const [deleteJobConfirm, setDeleteJobConfirm] = useState(false);
+
   return (
     <>
       <h2 className="text-xl pt-5">Job {index}</h2>
@@ -59,11 +62,18 @@ const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
             />
           </li>
           <li className="flex justify-center">
-            <Button
-              customStyle={{ marginTop: 20, marginBottom: 20 }}
-              buttonText={"Delete"}
-              onClickFunction={deleteJob}
-            />
+            {deleteJobConfirm ? (
+              <ConfirmBox
+                cancel={() => setDeleteJobConfirm(false)}
+                deleteFunction={deleteJob}
+              />
+            ) : (
+              <Button
+                customStyle={{ marginTop: 20, marginBottom: 20 }}
+                buttonText={"Delete"}
+                onClickFunction={() => setDeleteJobConfirm(true)}
+              />
+            )}
           </li>
         </ul>
       </form>

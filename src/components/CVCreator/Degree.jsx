@@ -1,9 +1,12 @@
-import React from "react";
+import { useState } from "react";
 import Button from "../Button";
 import InputField from "../InputField";
 import TextAreaField from "../TextAreaField";
+import ConfirmBox from "../ConfirmBox";
 
 const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
+  const [deleteDegreeConfirm, setDeleteDegreeConfirm] = useState(false);
+
   return (
     <>
       <h2 className="text-xl pt-5">Degree {index}</h2>
@@ -60,11 +63,18 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
             />
           </li>
           <li className="flex justify-center">
-            <Button
-              customStyle={{ marginTop: 20, marginBottom: 20 }}
-              buttonText={"Delete"}
-              onClickFunction={deleteDegree}
-            />
+            {deleteDegreeConfirm ? (
+              <ConfirmBox
+                cancel={() => setDeleteDegreeConfirm(false)}
+                deleteFunction={deleteDegree}
+              />
+            ) : (
+              <Button
+                customStyle={{ marginTop: 20, marginBottom: 20 }}
+                buttonText={"Delete"}
+                onClickFunction={() => setDeleteDegreeConfirm(true)}
+              />
+            )}
           </li>
         </ul>
       </form>

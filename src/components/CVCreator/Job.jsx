@@ -58,7 +58,7 @@ const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
               onChangeFunction={handleWorkExperienceChange}
             />
           </li>
-          <li className="flex justify-end">
+          <li className="flex justify-center">
             <Button
               customStyle={{ marginTop: 20, marginBottom: 20 }}
               buttonText={"Delete"}

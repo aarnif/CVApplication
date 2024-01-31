@@ -89,7 +89,9 @@ const CVCreator = ({
             );
           })
         )}
-        <Button onClickFunction={addNewJob} buttonText={"Add new job"} />
+        <div className="flex justify-center">
+          <Button onClickFunction={addNewJob} buttonText={"Add new job"} />
+        </div>
       </Togglable>
       <Togglable
         icon={<FontAwesomeIcon icon={faUserGraduate} size={"xl"} />}
@@ -113,7 +115,12 @@ const CVCreator = ({
             );
           })
         )}
-        <Button onClickFunction={addNewDegree} buttonText={"Add new degree"} />
+        <div className="flex justify-center">
+          <Button
+            onClickFunction={addNewDegree}
+            buttonText={"Add new degree"}
+          />
+        </div>
       </Togglable>
       <Togglable
         icon={<FontAwesomeIcon icon={faUserGear} size={"xl"} />}

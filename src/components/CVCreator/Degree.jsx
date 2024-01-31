@@ -59,7 +59,7 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
               onChangeFunction={handleEducationChange}
             />
           </li>
-          <li className="flex justify-end">
+          <li className="flex justify-center">
             <Button
               customStyle={{ marginTop: 20, marginBottom: 20 }}
               buttonText={"Delete"}

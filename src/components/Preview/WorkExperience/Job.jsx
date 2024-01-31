@@ -10,10 +10,10 @@ const Job = ({ job }) => {
 
   return (
     <div className="pt-5 pb-2 border-b-2">
-      <h1 className="text-lg">{company}</h1>
-      <h2 className="text-base pt-2">{position}</h2>
-      <p className="text-sm pt-2">{formattedDate}</p>
-      <p className="text-base pt-2 italic">{description}</p>
+      <h1 className="text-lg font-bold">{company}</h1>
+      <h2 className="text-base font-semibold pt-2">{position}</h2>
+      <p className="text-sm font-medium pt-2">{formattedDate}</p>
+      <p className="text-sm italic pt-2">{description}</p>
     </div>
   );
 };

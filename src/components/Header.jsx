@@ -1,9 +1,8 @@
 import React from "react";
-import "./Header.css";
 
 const Header = () => {
   return (
-    <header className="header-font flex justify-center text-4xl mb-10">
+    <header className="font-['Heavitas'] flex justify-center text-4xl mb-10">
       CV Creator
     </header>
   );

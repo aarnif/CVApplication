@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Heavitas";
+  src: url("./assets/fonts/heavitas/Heavitas.ttf");
+}
+
+@layer base {
+  html {
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+}
+
 body {
   margin: 0;
   box-sizing: border-box;

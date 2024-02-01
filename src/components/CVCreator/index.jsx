@@ -15,8 +15,11 @@ import {
   faUserGear,
 } from "@fortawesome/free-solid-svg-icons";
 
+import { forwardRef } from "react";
+
 const CVCreator = ({
   handleLoadExample,
+  handlePrint,
   handleReset,
   personalInfo,
   handlePersonalInfoChange,
@@ -42,6 +45,11 @@ const CVCreator = ({
           customStyle={{ marginTop: 10, marginLeft: 40, marginRight: 40 }}
           onClickFunction={handleLoadExample}
           buttonText={"Load Example"}
+        />
+        <Button
+          customStyle={{ marginTop: 10, marginLeft: 40, marginRight: 40 }}
+          onClickFunction={handlePrint}
+          buttonText={"CV to PDF"}
         />
         <Button
           customStyle={{ marginTop: 10, marginLeft: 40, marginRight: 40 }}

@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
+import { useReactToPrint } from "react-to-print";
+
 import "./App.css";
 
 import Header from "./components/Header.jsx";
@@ -19,6 +21,13 @@ function App() {
   );
   const [education, setEducation] = useState(emptyData.education);
   const [skills, setSkills] = useState(emptyData.skills);
+
+  // For printing the CV to PDF
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+    documentTitle: `${personalInfo.firstName}-${personalInfo.lastName}-CV`,
+  });
 
   const handleLoadExample = () => {
     console.log("Clicked toggle show example.");
@@ -41,7 +50,6 @@ function App() {
   const handlePersonalInfoChange = (event) => {
     event.preventDefault();
     console.log("Hande change personal info.");
-    // console.log(event.target?.files[0]);
 
     if (event.target.name === "image") {
       const newPersonalInfo = {
@@ -186,6 +194,7 @@ function App() {
       <main className="flex">
         <CVCreator
           handleLoadExample={handleLoadExample}
+          handlePrint={handlePrint}
           handleReset={handleReset}
           personalInfo={personalInfo}
           handlePersonalInfoChange={handlePersonalInfoChange}
@@ -205,6 +214,7 @@ function App() {
           deleteSkill={deleteSkill}
         />
         <Preview
+          componentRef={componentRef}
           personalInfo={personalInfo}
           contactInfo={contactInfo}
           workExperience={workExperience}

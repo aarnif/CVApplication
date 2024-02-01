@@ -6,6 +6,7 @@ import Education from "./Education";
 import Skills from "./Skills";
 
 const Preview = ({
+  componentRef,
   personalInfo,
   contactInfo,
   workExperience,
@@ -14,7 +15,10 @@ const Preview = ({
 }) => {
   return (
     <main className="px-40">
-      <div className="w-[800px] h-[1128px] bg-white shadow-lg">
+      <div
+        ref={componentRef}
+        className="w-[800px] h-[1128px] bg-white shadow-lg"
+      >
         <PersonalInfo personalInfo={personalInfo} />
         <WorkExperience workExperience={workExperience} />
         <Education education={education} />

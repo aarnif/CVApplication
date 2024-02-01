@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const Togglable = (props) => {
   const [visible, setVisible] = useState(false);
@@ -20,20 +21,32 @@ const Togglable = (props) => {
           <h1 className="text-2xl font-bold">{props.header}</h1>
         </li>
         <li style={hideWhenVisible} className="m-auto mr-0">
-          <FontAwesomeIcon
-            className="cursor-pointer"
-            icon={faAngleDown}
-            size={"lg"}
-            onClick={toggleVisibility}
-          />
+          <motion.div
+            whileTap={{
+              rotate: -180,
+            }}
+          >
+            <FontAwesomeIcon
+              className="cursor-pointer"
+              icon={faAngleDown}
+              size={"lg"}
+              onClick={toggleVisibility}
+            />
+          </motion.div>
         </li>
         <li style={showWhenVisible} className="m-auto mr-0">
-          <FontAwesomeIcon
-            className="cursor-pointer"
-            icon={faAngleUp}
-            size={"lg"}
-            onClick={toggleVisibility}
-          />
+          <motion.div
+            whileTap={{
+              rotate: 180,
+            }}
+          >
+            <FontAwesomeIcon
+              className="cursor-pointer"
+              icon={faAngleUp}
+              size={"lg"}
+              onClick={toggleVisibility}
+            />
+          </motion.div>
         </li>
       </ul>
       <div style={showWhenVisible}>{props.children}</div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Settings from "./Settings";
 import PersonalInfo from "./PersonalInfo";
 import ContactInfo from "./ContactInfo";
 import Job from "./Job";
@@ -8,6 +9,7 @@ import Togglable from "../Togglable";
 import Button from "../Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faGear,
   faUser,
   faAddressCard,
   faUserTie,
@@ -15,9 +17,9 @@ import {
   faUserGear,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { forwardRef } from "react";
-
 const CVCreator = ({
+  layout,
+  handleLayoutChange,
   handleLoadExample,
   handlePrint,
   handleReset,
@@ -57,6 +59,12 @@ const CVCreator = ({
           buttonText={"Reset CV"}
         />
       </div>
+      <Togglable
+        icon={<FontAwesomeIcon icon={faGear} size={"xl"} />}
+        header={"Layout Settings"}
+      >
+        <Settings layout={layout} handleLayoutChange={handleLayoutChange} />
+      </Togglable>
       <Togglable
         icon={<FontAwesomeIcon icon={faUser} size={"xl"} />}
         header={"Personal Info"}

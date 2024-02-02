@@ -2,11 +2,16 @@ import React from "react";
 import Bio from "./Bio";
 import Image from "./Image";
 
-const PersonalInfo = ({ personalInfo }) => {
+const PersonalInfo = ({ layout, personalInfo }) => {
   const { firstName, lastName, title, description, image } = personalInfo;
   const fullName = `${firstName ? firstName : ""} ${lastName ? lastName : ""}`;
   return (
-    <div className="flex bg-gradient-to-r from-sky-600 to-blue-700">
+    <div
+      style={{
+        backgroundImage: `linear-gradient(90deg, ${layout.headerBackGroundColorFrom}, ${layout.headerBackGroundColorTo})`,
+      }}
+      className="flex"
+    >
       <Bio fullName={fullName} title={title} description={description} />
       <Image image={image} />
     </div>

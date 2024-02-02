@@ -10,10 +10,12 @@ import Footer from "./components/Footer.jsx";
 
 import { v4 as uuid } from "uuid";
 
+import layoutSettings from "./layoutSettings.js";
 import emptyData from "./emptyData.js";
 import exampleData from "./exampleData.js";
 
 function App() {
+  const [layout, setLayout] = useState(layoutSettings);
   const [personalInfo, setPersonalInfo] = useState(emptyData.personalInfo);
   const [contactInfo, setContactInfo] = useState(emptyData.contactInfo);
   const [workExperience, setWorkExperience] = useState(
@@ -45,6 +47,18 @@ function App() {
     setWorkExperience(emptyData.workExperience);
     setEducation(emptyData.education);
     setSkills(emptyData.skills);
+  };
+
+  const handleLayoutChange = (event) => {
+    event.preventDefault();
+    console.log("Handle layout change.");
+
+    const newLayout = {
+      ...layout,
+      [event.target.name]: event.target.value,
+    };
+    console.log(newLayout);
+    setLayout(newLayout);
   };
 
   const handlePersonalInfoChange = (event) => {
@@ -186,13 +200,15 @@ function App() {
     setSkills(newSkills);
   };
 
-  console.log(personalInfo);
+  console.log(layout);
 
   return (
     <>
       <Header />
       <main className="flex">
         <CVCreator
+          layout={layout}
+          handleLayoutChange={handleLayoutChange}
           handleLoadExample={handleLoadExample}
           handlePrint={handlePrint}
           handleReset={handleReset}
@@ -215,6 +231,7 @@ function App() {
         />
         <Preview
           componentRef={componentRef}
+          layout={layout}
           personalInfo={personalInfo}
           contactInfo={contactInfo}
           workExperience={workExperience}

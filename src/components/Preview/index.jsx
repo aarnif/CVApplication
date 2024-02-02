@@ -1,9 +1,6 @@
 import React from "react";
-import PersonalInfo from "./Personalnfo/index";
-import ContactInfo from "./ContactInfo";
-import WorkExperience from "./WorkExperience";
-import Education from "./Education";
-import Skills from "./Skills";
+import VerticalView from "./VerticalView/index";
+import HorizontalView from "./HorizontalView/index";
 
 const Preview = ({
   componentRef,
@@ -20,13 +17,26 @@ const Preview = ({
         ref={componentRef}
         className="w-[800px] h-[1128px] bg-white shadow-lg"
       >
-        <PersonalInfo layout={layout} personalInfo={personalInfo} />
-        <WorkExperience workExperience={workExperience} />
-        <Education education={education} />
-        <div className="flex justify-between">
-          <Skills layout={layout} skills={skills} />
-          <ContactInfo contactInfo={contactInfo} />
-        </div>
+        {layout.view === "vertical" && (
+          <VerticalView
+            layout={layout}
+            personalInfo={personalInfo}
+            contactInfo={contactInfo}
+            workExperience={workExperience}
+            education={education}
+            skills={skills}
+          />
+        )}
+        {layout.view === "horizontal" && (
+          <HorizontalView
+            layout={layout}
+            personalInfo={personalInfo}
+            contactInfo={contactInfo}
+            workExperience={workExperience}
+            education={education}
+            skills={skills}
+          />
+        )}
       </div>
     </main>
   );

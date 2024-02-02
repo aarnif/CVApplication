@@ -43,6 +43,20 @@ const Settings = ({ layout, handleLayoutChange }) => {
             onChangeFunction={handleLayoutChange}
           />
         </li>
+        <li>
+          <label className="font-bold">View:</label>
+        </li>
+        <li>
+          <select
+            name="view"
+            value={layout.view}
+            onChange={handleLayoutChange}
+            className="bg-slate-200 hover:bg-slate-300 shadow-lg rounded-lg p-2 mb-3"
+          >
+            <option value="vertical">Vertical</option>
+            <option value="horizontal">Horizontal</option>
+          </select>
+        </li>
       </ul>
     </form>
   );

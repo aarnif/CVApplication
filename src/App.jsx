@@ -52,6 +52,8 @@ function App() {
   const handleLayoutChange = (event) => {
     event.preventDefault();
     console.log("Handle layout change.");
+    console.log(event.target.name);
+    console.log(event.target.value);
 
     const newLayout = {
       ...layout,

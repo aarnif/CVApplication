@@ -27,8 +27,20 @@ const Preview = ({
             skills={skills}
           />
         )}
-        {layout.view === "horizontal" && (
+        {layout.view === "horizontalLeft" && (
           <HorizontalView
+            display={"left"}
+            layout={layout}
+            personalInfo={personalInfo}
+            contactInfo={contactInfo}
+            workExperience={workExperience}
+            education={education}
+            skills={skills}
+          />
+        )}
+        {layout.view === "horizontalRight" && (
+          <HorizontalView
+            display={"right"}
             layout={layout}
             personalInfo={personalInfo}
             contactInfo={contactInfo}

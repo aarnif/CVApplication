@@ -42,19 +42,19 @@ const CVCreator = ({
 }) => {
   return (
     <main className="min-w-[500px] flex-grow overflow-y-scroll">
-      <div className="flex justify-between">
+      <div className="flex justify-between px-10">
         <Button
-          customStyle={{ marginTop: 10, marginLeft: 40, marginRight: 40 }}
+          customStyle={{ margin: 10 }}
           onClickFunction={handleLoadExample}
           buttonText={"Load Example"}
         />
         <Button
-          customStyle={{ marginTop: 10, marginLeft: 40, marginRight: 40 }}
+          customStyle={{ margin: 10 }}
           onClickFunction={handlePrint}
           buttonText={"CV to PDF"}
         />
         <Button
-          customStyle={{ marginTop: 10, marginLeft: 40, marginRight: 40 }}
+          customStyle={{ margin: 10 }}
           onClickFunction={handleReset}
           buttonText={"Reset CV"}
         />

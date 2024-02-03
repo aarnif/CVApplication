@@ -3,7 +3,7 @@ import Job from "./Job";
 
 const WorkExperience = ({ workExperience }) => {
   return (
-    <div className="pt-5 px-12 text-zinc-700">
+    <div className="pt-5 text-zinc-700">
       <h1 className="font-['Heavitas'] text-xl text-zinc-800 border-b-2 border-black">
         Work Experience
       </h1>

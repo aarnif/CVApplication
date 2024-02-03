@@ -6,6 +6,7 @@ import Education from "../Education";
 import Skills from "../Skills";
 
 const HorizontalView = ({
+  display,
   layout,
   personalInfo,
   contactInfo,
@@ -15,18 +16,34 @@ const HorizontalView = ({
 }) => {
   return (
     <>
-      <div className="flex h-[1128px]">
-        <PersonalInfo
-          layout={layout}
-          personalInfo={personalInfo}
-          contactInfo={contactInfo}
-        />
-        <div className="pt-7">
-          <WorkExperience workExperience={workExperience} />
-          <Education education={education} />
-          <Skills layout={layout} skills={skills} />
+      {display === "left" && (
+        <div className="flex h-[1128px]">
+          <PersonalInfo
+            layout={layout}
+            personalInfo={personalInfo}
+            contactInfo={contactInfo}
+          />
+          <div className="pt-7 px-12">
+            <WorkExperience workExperience={workExperience} />
+            <Education education={education} />
+            <Skills layout={layout} skills={skills} />
+          </div>
         </div>
-      </div>
+      )}
+      {display === "right" && (
+        <div className="flex h-[1128px]">
+          <div className="flex flex-col grow pt-7 px-12">
+            <WorkExperience workExperience={workExperience} />
+            <Education education={education} />
+            <Skills layout={layout} skills={skills} />
+          </div>
+          <PersonalInfo
+            layout={layout}
+            personalInfo={personalInfo}
+            contactInfo={contactInfo}
+          />
+        </div>
+      )}
     </>
   );
 };

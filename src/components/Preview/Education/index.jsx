@@ -3,7 +3,7 @@ import Degree from "./Degree";
 
 const Education = ({ education }) => {
   return (
-    <div className="pt-5 px-12 text-zinc-700">
+    <div className="pt-5 text-zinc-700">
       <h1 className="font-['Heavitas'] text-xl text-zinc-800 border-b-2 border-black">
         Education
       </h1>

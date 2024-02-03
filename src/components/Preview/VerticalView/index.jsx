@@ -16,9 +16,11 @@ const VerticalView = ({
   return (
     <>
       <PersonalInfo layout={layout} personalInfo={personalInfo} />
-      <WorkExperience workExperience={workExperience} />
-      <Education education={education} />
-      <div className="flex justify-between">
+      <div className="px-12">
+        <WorkExperience workExperience={workExperience} />
+        <Education education={education} />
+      </div>
+      <div className="flex justify-between px-12">
         <Skills layout={layout} skills={skills} />
         <ContactInfo contactInfo={contactInfo} />
       </div>

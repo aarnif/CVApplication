@@ -7,13 +7,16 @@ import { faHouseUser } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const ContactInfo = ({ contactInfo }) => {
+const ContactInfo = ({ contactInfo, headerFont }) => {
   const { email, phone, location, homePage, linkedin, github } = contactInfo;
   return (
     <div className="flex-grow pt-5 pl-6 pr-12 text-zinc-700">
-      <h1 className="font-['Heavitas'] text-xl text-zinc-800 border-b-2 border-black">
+      <h2
+        style={{ fontFamily: headerFont }}
+        className="font-['Heavitas'] text-xl text-zinc-800 border-b-2 border-black"
+      >
         Contact Info
-      </h1>
+      </h2>
       <ul className="pt-3">
         <li className="flex justify-start items-center">
           <FontAwesomeIcon

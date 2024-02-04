@@ -15,6 +15,7 @@ const Preview = ({
     <main className="px-40">
       <div
         ref={componentRef}
+        style={{ fontFamily: layout.bodyFont }}
         className="w-[800px] h-[1128px] bg-white shadow-lg"
       >
         {layout.view === "vertical" && (

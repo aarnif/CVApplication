@@ -24,8 +24,11 @@ const HorizontalView = ({
             contactInfo={contactInfo}
           />
           <div className="pt-7 px-12">
-            <WorkExperience workExperience={workExperience} />
-            <Education education={education} />
+            <WorkExperience
+              workExperience={workExperience}
+              headerFont={layout.headerFont}
+            />
+            <Education education={education} headerFont={layout.headerFont} />
             <Skills layout={layout} skills={skills} />
           </div>
         </div>
@@ -33,8 +36,11 @@ const HorizontalView = ({
       {display === "right" && (
         <div className="flex h-[1128px]">
           <div className="flex flex-col grow pt-7 px-12">
-            <WorkExperience workExperience={workExperience} />
-            <Education education={education} />
+            <WorkExperience
+              workExperience={workExperience}
+              headerFont={layout.headerFont}
+            />
+            <Education education={education} headerFont={layout.headerFont} />
             <Skills layout={layout} skills={skills} />
           </div>
           <PersonalInfo

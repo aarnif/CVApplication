@@ -12,7 +12,12 @@ const PersonalInfo = ({ layout, personalInfo }) => {
       }}
       className="flex"
     >
-      <Bio fullName={fullName} title={title} description={description} />
+      <Bio
+        fullName={fullName}
+        title={title}
+        description={description}
+        headerFont={layout.headerFont}
+      />
       <Image image={image} />
     </div>
   );

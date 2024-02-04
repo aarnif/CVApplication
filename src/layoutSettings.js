@@ -4,6 +4,8 @@ const layoutSettings = {
   skillBackGroundColorFrom: "rgb(2 132 199)",
   skillBackGroundColorTo: "rgb(29 78 216)",
   view: "vertical",
+  headerFont: "Heavitas",
+  bodyFont: "sans-serif",
 };
 
 export default layoutSettings;

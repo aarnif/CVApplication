@@ -17,12 +17,15 @@ const VerticalView = ({
     <>
       <PersonalInfo layout={layout} personalInfo={personalInfo} />
       <div className="px-12">
-        <WorkExperience workExperience={workExperience} />
-        <Education education={education} />
+        <WorkExperience
+          workExperience={workExperience}
+          headerFont={layout.headerFont}
+        />
+        <Education education={education} headerFont={layout.headerFont} />
       </div>
       <div className="flex justify-between px-12">
         <Skills layout={layout} skills={skills} />
-        <ContactInfo contactInfo={contactInfo} />
+        <ContactInfo contactInfo={contactInfo} headerFont={layout.headerFont} />
       </div>
     </>
   );

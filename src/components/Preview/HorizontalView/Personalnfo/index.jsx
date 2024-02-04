@@ -17,8 +17,9 @@ const PersonalInfo = ({ layout, personalInfo, contactInfo }) => {
         title={title}
         description={description}
         image={image}
+        headerFont={layout.headerFont}
       />
-      <ContactInfo contactInfo={contactInfo} />
+      <ContactInfo contactInfo={contactInfo} headerFont={layout.headerFont} />
     </div>
   );
 };

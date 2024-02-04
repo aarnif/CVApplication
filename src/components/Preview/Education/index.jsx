@@ -1,12 +1,15 @@
 import React from "react";
 import Degree from "./Degree";
 
-const Education = ({ education }) => {
+const Education = ({ education, headerFont }) => {
   return (
     <div className="pt-5 text-zinc-700">
-      <h1 className="font-['Heavitas'] text-xl text-zinc-800 border-b-2 border-black">
+      <h2
+        style={{ fontFamily: headerFont }}
+        className="text-xl text-zinc-800 border-b-2 border-black"
+      >
         Education
-      </h1>
+      </h2>
       {education.map((degree) => (
         <Degree key={degree.id} id={degree.id} degree={degree} />
       ))}

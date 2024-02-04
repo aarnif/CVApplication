@@ -191,6 +191,8 @@ function App() {
     const newSkill = {
       id: uuid(),
       name: "",
+      colorFrom: "rgb(2 132 199)",
+      colorTo: "rgb(29 78 216)",
     };
     setSkills([...skills, newSkill]);
   };
@@ -202,7 +204,7 @@ function App() {
     setSkills(newSkills);
   };
 
-  console.log(layout);
+  // console.log(layout);
 
   return (
     <>

@@ -54,22 +54,32 @@ const exampleData = {
     {
       id: uuid(),
       name: "HTML",
+      colorFrom: "rgb(2 132 199)",
+      colorTo: "rgb(29 78 216)",
     },
     {
       id: uuid(),
       name: "CSS",
+      colorFrom: "rgb(2 132 199)",
+      colorTo: "rgb(29 78 216)",
     },
     {
       id: uuid(),
       name: "JavaScript",
+      colorFrom: "rgb(2 132 199)",
+      colorTo: "rgb(29 78 216)",
     },
     {
       id: uuid(),
       name: "React",
+      colorFrom: "rgb(2 132 199)",
+      colorTo: "rgb(29 78 216)",
     },
     {
       id: uuid(),
       name: "Node.js",
+      colorFrom: "rgb(2 132 199)",
+      colorTo: "rgb(29 78 216)",
     },
   ],
 };

@@ -25,25 +25,6 @@ const Settings = ({ layout, handleLayoutChange }) => {
           />
         </li>
         <li>
-          <label className="font-bold">Skills Background Color:</label>
-        </li>
-        <li className="flex items-center bg-slate-200 hover:bg-slate-300 shadow-lg rounded-lg p-2 mb-3">
-          <InputFieldColor
-            labelName={"From:"}
-            inputName={"skillBackGroundColorFrom"}
-            inputType={"color"}
-            inputValue={layout.skillBackGroundColorFrom}
-            onChangeFunction={handleLayoutChange}
-          />
-          <InputFieldColor
-            labelName={"To:"}
-            inputName={"skillBackGroundColorTo"}
-            inputType={"color"}
-            inputValue={layout.skillBackGroundColorTo}
-            onChangeFunction={handleLayoutChange}
-          />
-        </li>
-        <li>
           <label className="font-bold">View:</label>
         </li>
         <li className="bg-slate-200 hover:bg-slate-300 shadow-lg rounded-lg p-2 mb-3">

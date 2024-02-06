@@ -209,7 +209,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="flex">
+      <main className="flex grow overflow-y-scroll">
         <CVCreator
           layout={layout}
           handleLayoutChange={handleLayoutChange}

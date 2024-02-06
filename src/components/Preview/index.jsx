@@ -13,7 +13,7 @@ const Preview = ({
   skills,
 }) => {
   return (
-    <main className="px-40">
+    <main className="pl-10">
       <AnimatePresence initial={false} mode="wait">
         <motion.div
           key={layout.view}

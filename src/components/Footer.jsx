@@ -4,7 +4,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="flex justify-center mt-5 font-bold">
+    <footer className="flex justify-center font-bold m-4">
       <h3>
         Copyright © {currentYear} aarnif{" "}
         <a href="https://github.com/aarnif" target="_blank" rel="noreferrer">

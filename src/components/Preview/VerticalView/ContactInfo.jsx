@@ -13,9 +13,9 @@ const ContactInfo = ({ contactInfo, headerFont }) => {
     <div className="flex-grow pt-5 pl-6 pr-12 text-zinc-700">
       <h2
         style={{ fontFamily: headerFont }}
-        className="font-['Heavitas'] text-xl text-zinc-800 border-b-2 border-black"
+        className="font-['Heavitas'] text-xl font-bold text-zinc-800 border-b-2 border-black"
       >
-        Contact Info
+        CONTACT INFO
       </h2>
       <ul className="pt-3">
         <li className="flex justify-start items-center">

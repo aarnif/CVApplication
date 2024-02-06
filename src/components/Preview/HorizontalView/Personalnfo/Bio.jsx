@@ -7,9 +7,9 @@ const Bio = ({ fullName, title, description, image, headerFont }) => {
     <div className="min-w-[200px] text-slate-100 flex flex-col items-center">
       <h1
         style={{ fontFamily: headerFont }}
-        className="text-3xl font-['Heavitas']"
+        className="text-3xl font-['Heavitas'] font-bold"
       >
-        {fullName}
+        {fullName.toUpperCase()}
       </h1>
       <h2 className="text-xl font-bold">{title}</h2>
       <Image image={image} />

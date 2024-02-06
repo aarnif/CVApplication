@@ -6,9 +6,9 @@ const Education = ({ education, headerFont }) => {
     <div className="pt-5 text-zinc-700">
       <h2
         style={{ fontFamily: headerFont }}
-        className="text-xl text-zinc-800 border-b-2 border-black"
+        className="text-xl font-bold text-zinc-800 border-b-2 border-black"
       >
-        Education
+        EDUCATION
       </h2>
       {education.map((degree) => (
         <Degree key={degree.id} id={degree.id} degree={degree} />

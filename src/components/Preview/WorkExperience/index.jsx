@@ -6,9 +6,9 @@ const WorkExperience = ({ workExperience, headerFont }) => {
     <div className="pt-5 text-zinc-700">
       <h2
         style={{ fontFamily: headerFont }}
-        className="text-xl text-zinc-800 border-b-2 border-black"
+        className="text-xl font-bold text-zinc-800 border-b-2 border-black"
       >
-        Work Experience
+        WORK EXPERIENCE
       </h2>
       {workExperience.map((job) => (
         <Job key={job.id} id={job.id} job={job} />

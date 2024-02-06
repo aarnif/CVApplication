@@ -6,9 +6,9 @@ const Skills = ({ layout, skills }) => {
     <div className="flex-grow text-zinc-700 pt-5">
       <h2
         style={{ fontFamily: layout.headerFont }}
-        className="font-['Heavitas'] text-xl text-zinc-800 border-b-2 border-black"
+        className="text-xl font-bold text-zinc-800 border-b-2 border-black"
       >
-        Skills
+        SKILLS
       </h2>
       <ul className="columns-3 pr-5">
         {skills.map((skill) => (

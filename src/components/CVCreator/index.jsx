@@ -41,7 +41,7 @@ const CVCreator = ({
   deleteSkill,
 }) => {
   return (
-    <main className="min-w-[500px] flex-grow overflow-y-scroll">
+    <main className="flex-grow min-w-[848px] 2xl:min-w-[500px] 2xl:overflow-y-scroll">
       <div className="flex justify-between px-10">
         <Button
           customStyle={{ margin: 10 }}

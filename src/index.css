@@ -35,3 +35,21 @@ body {
   min-height: 100vh;
   max-height: 100vh;
 }
+
+@media (max-width: 2200px) {
+  #root {
+    padding: 0px 300px 0px 300px;
+  }
+}
+
+@media (max-width: 2000px) {
+  #root {
+    padding: 0px 200px 0px 200px;
+  }
+}
+
+@media (max-width: 1800px) {
+  #root {
+    padding: 0px 100px 0px 100px;
+  }
+}

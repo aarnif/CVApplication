@@ -209,7 +209,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="flex grow overflow-y-scroll">
+      <main className="flex grow flex-col sm:max-2xl:items-center overflow-y-none 2xl:grow 2xl:overflow-y-scroll 2xl:flex-row">
         <CVCreator
           layout={layout}
           handleLayoutChange={handleLayoutChange}

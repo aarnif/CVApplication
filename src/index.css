@@ -15,6 +15,11 @@
   src: url("./assets/fonts/heavitas/Heavitas.ttf");
 }
 
+@font-face {
+  font-family: "SweetieBubbleGum";
+  src: url("./assets/fonts/sweetie_bubble_gum/SweetieBubbleGum.ttf");
+}
+
 @layer base {
   html {
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",

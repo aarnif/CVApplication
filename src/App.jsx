@@ -204,10 +204,8 @@ function App() {
     setSkills(newSkills);
   };
 
-  // console.log(layout);
-
   return (
-    <>
+    <div className="flex flex-col bg-slate-50 pl-10 pr-16 3xl:px-96">
       <Header />
       <main className="flex grow flex-col sm:max-2xl:items-center overflow-y-none 2xl:grow 2xl:overflow-y-scroll 2xl:flex-row">
         <CVCreator
@@ -244,7 +242,7 @@ function App() {
         />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -8,7 +8,9 @@ const Skill = ({ index, id, skill, handleSkillChange, deleteSkill }) => {
   const [deleteSkillConfirm, setDeleteSkillConfirm] = useState(false);
   return (
     <>
-      <h2 className="text-xl pt-5">Skill {index}</h2>
+      <h2 className="text-xl pt-5 font-bold dark:text-slate-200">
+        Skill {index}
+      </h2>
       <form>
         <ul>
           <li className="flex flex-col">
@@ -22,9 +24,11 @@ const Skill = ({ index, id, skill, handleSkillChange, deleteSkill }) => {
             />
           </li>
           <li className="flex">
-            <label className="mt-3 font-bold">Skill Color:</label>
+            <label className="mt-3 font-bold dark:text-slate-200">
+              Skill Color:
+            </label>
           </li>
-          <li className="flex items-center bg-slate-200 hover:bg-slate-300 shadow-lg rounded-lg p-2 mb-3">
+          <li className="flex items-center bg-slate-200 hover:bg-slate-300 dark:bg-zinc-500 dark:hover:bg-zinc-600 shadow-lg rounded-lg p-2 mb-3">
             <InputFieldColor
               labelName={"From:"}
               inputName={"colorFrom"}

@@ -18,6 +18,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const CVCreator = ({
+  darkMode,
   layout,
   handleLayoutChange,
   handleLoadExample,
@@ -60,14 +61,28 @@ const CVCreator = ({
         />
       </div>
       <Togglable
-        icon={<FontAwesomeIcon icon={faGear} size={"xl"} />}
+        icon={
+          <FontAwesomeIcon
+            icon={faGear}
+            size={"xl"}
+            color={darkMode ? "rgb(226 232 240)" : "black"}
+          />
+        }
         header={"Layout Settings"}
+        darkMode={darkMode}
       >
         <Settings layout={layout} handleLayoutChange={handleLayoutChange} />
       </Togglable>
       <Togglable
-        icon={<FontAwesomeIcon icon={faUser} size={"xl"} />}
+        icon={
+          <FontAwesomeIcon
+            icon={faUser}
+            size={"xl"}
+            color={darkMode ? "rgb(226 232 240)" : "black"}
+          />
+        }
         header={"Personal Info"}
+        darkMode={darkMode}
       >
         <PersonalInfo
           personalInfo={personalInfo}
@@ -75,8 +90,15 @@ const CVCreator = ({
         />
       </Togglable>
       <Togglable
-        icon={<FontAwesomeIcon icon={faAddressCard} size={"xl"} />}
+        icon={
+          <FontAwesomeIcon
+            icon={faAddressCard}
+            size={"xl"}
+            color={darkMode ? "rgb(226 232 240)" : "black"}
+          />
+        }
         header={"Contact Info"}
+        darkMode={darkMode}
       >
         <ContactInfo
           contactInfo={contactInfo}
@@ -84,11 +106,18 @@ const CVCreator = ({
         />
       </Togglable>
       <Togglable
-        icon={<FontAwesomeIcon icon={faUserTie} size={"xl"} />}
+        icon={
+          <FontAwesomeIcon
+            icon={faUserTie}
+            size={"xl"}
+            color={darkMode ? "rgb(226 232 240)" : "black"}
+          />
+        }
         header={"Work Experience"}
+        darkMode={darkMode}
       >
         {workExperience.length === 0 ? (
-          <h2 className="text-xl pt-5">No jobs added.</h2>
+          <h2 className="text-xl pt-5 dark:text-slate-200">No jobs added.</h2>
         ) : (
           workExperience.map((job, index) => {
             return (
@@ -110,11 +139,20 @@ const CVCreator = ({
         </div>
       </Togglable>
       <Togglable
-        icon={<FontAwesomeIcon icon={faUserGraduate} size={"xl"} />}
+        icon={
+          <FontAwesomeIcon
+            icon={faUserGraduate}
+            size={"xl"}
+            color={darkMode ? "rgb(226 232 240)" : "black"}
+          />
+        }
         header={"Education"}
+        darkMode={darkMode}
       >
         {education.length === 0 ? (
-          <h2 className="text-xl pt-5">No degrees added.</h2>
+          <h2 className="text-xl pt-5 dark:text-slate-200">
+            No degrees added.
+          </h2>
         ) : (
           education.map((degree, index) => {
             return (
@@ -139,11 +177,18 @@ const CVCreator = ({
         </div>
       </Togglable>
       <Togglable
-        icon={<FontAwesomeIcon icon={faUserGear} size={"xl"} />}
+        icon={
+          <FontAwesomeIcon
+            icon={faUserGear}
+            size={"xl"}
+            color={darkMode ? "rgb(226 232 240)" : "black"}
+          />
+        }
         header={"Skills"}
+        darkMode={darkMode}
       >
         {skills.length === 0 ? (
-          <h2 className="text-xl pt-5">No skills added.</h2>
+          <h2 className="text-xl pt-5 dark:text-slate-200">No skills added.</h2>
         ) : (
           skills.map((skill, index) => {
             return (
@@ -160,7 +205,9 @@ const CVCreator = ({
             );
           })
         )}
-        <Button onClickFunction={addNewSkill} buttonText={"Add new skill"} />
+        <div className="flex justify-center">
+          <Button onClickFunction={addNewSkill} buttonText={"Add new skill"} />
+        </div>
       </Togglable>
     </main>
   );

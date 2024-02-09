@@ -15,6 +15,7 @@ import emptyData from "./emptyData.js";
 import exampleData from "./exampleData.js";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
   const [layout, setLayout] = useState(layoutSettings);
   const [personalInfo, setPersonalInfo] = useState(emptyData.personalInfo);
   const [contactInfo, setContactInfo] = useState(emptyData.contactInfo);
@@ -205,10 +206,11 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col bg-slate-50 pl-10 pr-16 3xl:px-96">
-      <Header />
+    <div className="flex flex-col bg-slate-50 dark:bg-zinc-800 pl-10 pr-16 3xl:px-96">
+      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <main className="flex grow flex-col sm:max-2xl:items-center overflow-y-none 2xl:grow 2xl:overflow-y-scroll 2xl:flex-row">
         <CVCreator
+          darkMode={darkMode}
           layout={layout}
           handleLayoutChange={handleLayoutChange}
           handleLoadExample={handleLoadExample}
@@ -241,7 +243,7 @@ function App() {
           skills={skills}
         />
       </main>
-      <Footer />
+      <Footer darkMode={darkMode} />
     </div>
   );
 }

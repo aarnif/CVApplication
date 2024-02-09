@@ -9,7 +9,9 @@ const Job = ({ index, id, job, handleWorkExperienceChange, deleteJob }) => {
 
   return (
     <>
-      <h2 className="text-xl pt-5">Job {index}</h2>
+      <h2 className="text-xl pt-5 font-bold dark:text-slate-200">
+        Job {index}
+      </h2>
       <form>
         <ul>
           <li className="flex flex-col">

@@ -1,15 +1,12 @@
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
-const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  console.log(darkMode);
-
+const Header = ({ darkMode, setDarkMode }) => {
   const onTapStart = () => {
     console.log("Clicked");
     setDarkMode(!darkMode);
+    document.querySelector("html").classList.toggle("dark");
   };
 
   const colors = {
@@ -19,7 +16,7 @@ const Header = () => {
 
   return (
     <header className="flex justify-between m-6">
-      <h1 className="font-['Heavitas'] text-4xl">CV Creator</h1>
+      <h1 className="font-['Heavitas'] text-4xl dark:text-white">CV Creator</h1>
       <div className="flex rounded-full shadow-lg bg-gradient-to-r from-indigo-500 to-indigo-600 w-28 py-1 px-1">
         <div
           className={`flex justify-between items-center grow rounded-full ${

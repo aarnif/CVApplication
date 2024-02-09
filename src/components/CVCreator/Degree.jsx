@@ -9,7 +9,9 @@ const Degree = ({ index, id, degree, handleEducationChange, deleteDegree }) => {
 
   return (
     <>
-      <h2 className="text-xl pt-5">Degree {index}</h2>
+      <h2 className="text-xl pt-5 font-bold dark:text-slate-200">
+        Degree {index}
+      </h2>
       <form>
         <ul>
           <li className="flex flex-col">

@@ -2,9 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
 
-const Footer = () => {
+const Footer = ({ darkMode }) => {
   return (
-    <footer className="font-['SweetieBubbleGum'] text-lg flex justify-center m-4">
+    <footer className="font-['SweetieBubbleGum'] text-lg flex justify-center my-6 dark:text-white">
       <ul className="flex">
         <li>
           <h3>Created By aarnif</h3>
@@ -25,7 +25,7 @@ const Footer = () => {
             >
               <FontAwesomeIcon
                 icon={faGithub}
-                style={{ color: "#000000" }}
+                style={{ color: darkMode ? "white" : "black" }}
                 size={"xl"}
               />
             </a>

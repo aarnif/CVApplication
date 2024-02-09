@@ -14,11 +14,13 @@ const Togglable = (props) => {
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg m-10 p-10">
+    <div className="bg-white dark:bg-zinc-700 shadow-lg rounded-lg m-10 p-10">
       <ul className="flex items-center">
         <li className="mt-2 mb-2 mr-4">{props.icon}</li>
         <li className="mt-2 mb-2 mr-4">
-          <h1 className="text-2xl font-bold">{props.header}</h1>
+          <h1 className="text-2xl font-bold dark:text-slate-200">
+            {props.header}
+          </h1>
         </li>
         <li style={hideWhenVisible} className="m-auto mr-0">
           <motion.div
@@ -31,6 +33,7 @@ const Togglable = (props) => {
               icon={faAngleDown}
               size={"lg"}
               onClick={toggleVisibility}
+              color={props.darkMode ? "rgb(226 232 240)" : "black"}
             />
           </motion.div>
         </li>
@@ -45,6 +48,7 @@ const Togglable = (props) => {
               icon={faAngleUp}
               size={"lg"}
               onClick={toggleVisibility}
+              color={props.darkMode ? "rgb(226 232 240)" : "black"}
             />
           </motion.div>
         </li>

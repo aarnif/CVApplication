@@ -6,9 +6,11 @@ const Settings = ({ layout, handleLayoutChange }) => {
     <form>
       <ul>
         <li className="mt-3">
-          <label className="font-bold">Header Background Color:</label>
+          <label className="font-bold dark:text-slate-200">
+            Header Background Color:
+          </label>
         </li>
-        <li className="flex items-center bg-slate-200 hover:bg-slate-300 shadow-lg rounded-lg p-2 mb-3">
+        <li className="flex items-center bg-slate-200 hover:bg-slate-300 dark:bg-zinc-500 dark:hover:bg-zinc-600 shadow-lg rounded-lg p-2 mb-3">
           <InputFieldColor
             labelName={"From:"}
             inputName={"headerBackGroundColorFrom"}
@@ -25,9 +27,9 @@ const Settings = ({ layout, handleLayoutChange }) => {
           />
         </li>
         <li>
-          <label className="font-bold">View:</label>
+          <label className="font-bold dark:text-slate-200">View:</label>
         </li>
-        <li className="bg-slate-200 hover:bg-slate-300 shadow-lg rounded-lg p-2 mb-3">
+        <li className="bg-slate-200 hover:bg-slate-300 dark:bg-zinc-500 dark:hover:bg-zinc-600 shadow-lg rounded-lg p-2 mb-3">
           <button
             name="view"
             value="vertical"
@@ -47,13 +49,13 @@ const Settings = ({ layout, handleLayoutChange }) => {
             className="bg-gradient-to-r from-white from-50% to-indigo-500 to-50% hover:from-slate-200 hover:to-indigo-700 active:scale-95 border border-black rounded-sm p-5 m-1"
           ></button>
         </li>
-        <li className="bg-slate-200 hover:bg-slate-300 shadow-lg rounded-lg p-2 mb-3">
-          <label className="font-bold">Header font:</label>
+        <li className="bg-slate-200 hover:bg-slate-300 dark:bg-zinc-500 dark:hover:bg-zinc-600 shadow-lg rounded-lg p-2 mb-3">
+          <label className="font-bold dark:text-slate-200">Header font:</label>
           <select
             name="headerFont"
             value={layout.headerFont}
             onChange={handleLayoutChange}
-            className="bg-slate-100 hover:bg-slate-200 shadow-lg rounded-lg my-1 mx-2 p-2"
+            className="bg-slate-100 hover:bg-slate-200 dark:bg-zinc-400 dark:hover:bg-zinc-500 dark:text-slate-200 shadow-lg rounded-lg my-1 mx-2 p-2"
           >
             <option value="Heavitas">Heavitas</option>
             <option value="ui-sans-serif">ui-sans-serif</option>
@@ -76,13 +78,13 @@ const Settings = ({ layout, handleLayoutChange }) => {
             <option value="'Plaster'">Plaster</option>
           </select>
         </li>
-        <li className="bg-slate-200 hover:bg-slate-300 shadow-lg rounded-lg p-2 mb-3">
-          <label className="font-bold">Body font:</label>
+        <li className="bg-slate-200 hover:bg-slate-300 dark:bg-zinc-500 dark:hover:bg-zinc-600 shadow-lg rounded-lg p-2 mb-3">
+          <label className="font-bold dark:text-slate-200">Body font:</label>
           <select
             name="bodyFont"
             value={layout.bodyFont}
             onChange={handleLayoutChange}
-            className="bg-slate-100 hover:bg-slate-200 shadow-lg rounded-lg my-1 mx-2 p-2"
+            className="bg-slate-100 hover:bg-slate-200 dark:bg-zinc-400 dark:hover:bg-zinc-500 dark:text-slate-200 shadow-lg rounded-lg my-1 mx-2 p-2"
           >
             <option value="ui-sans-serif">ui-sans-serif</option>
             <option value="system-ui">system-ui</option>

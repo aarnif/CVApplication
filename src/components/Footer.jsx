@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Footer = ({ darkMode }) => {
   return (
-    <footer className="font-['SweetieBubbleGum'] text-lg flex justify-center my-6 dark:text-white">
+    <footer className="font-['SweetieBubbleGum'] text-lg flex justify-center dark:text-white">
       <ul className="flex">
         <li>
           <h3>Created By aarnif</h3>

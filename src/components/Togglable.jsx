@@ -14,7 +14,7 @@ const Togglable = (props) => {
   };
 
   return (
-    <div className="bg-white dark:bg-zinc-700 shadow-lg rounded-lg m-10 p-10">
+    <div className="bg-white dark:bg-zinc-700 shadow-lg rounded-lg m-10 py-6 px-10">
       <ul className="flex items-center">
         <li className="mt-2 mb-2 mr-4">{props.icon}</li>
         <li className="mt-2 mb-2 mr-4">

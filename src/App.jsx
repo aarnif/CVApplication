@@ -208,7 +208,7 @@ function App() {
   return (
     <div className="flex flex-col bg-slate-50 dark:bg-zinc-800 pl-10 pr-16 3xl:px-96">
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main className="flex grow flex-col sm:max-2xl:items-center overflow-y-none 2xl:grow 2xl:overflow-y-scroll 2xl:flex-row">
+      <main className="h-[90vh] flex grow flex-col sm:max-2xl:items-center overflow-y-auto 2xl:grow 2xl:flex-row">
         <CVCreator
           darkMode={darkMode}
           layout={layout}

@@ -47,7 +47,7 @@ const CVCreator = ({
         <Button
           customStyle={{ margin: 10 }}
           onClickFunction={handleLoadExample}
-          buttonText={"Load Example"}
+          buttonText={"Load Example CV"}
         />
         <Button
           customStyle={{ margin: 10 }}
@@ -57,7 +57,7 @@ const CVCreator = ({
         <Button
           customStyle={{ margin: 10 }}
           onClickFunction={handleReset}
-          buttonText={"Reset CV"}
+          buttonText={"Clear CV"}
         />
       </div>
       <Togglable

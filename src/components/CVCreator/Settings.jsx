@@ -58,24 +58,14 @@ const Settings = ({ layout, handleLayoutChange }) => {
             className="bg-slate-100 hover:bg-slate-200 dark:bg-zinc-400 dark:hover:bg-zinc-500 dark:text-slate-200 shadow-lg rounded-lg my-1 mx-2 p-2"
           >
             <option value="Heavitas">Heavitas</option>
-            <option value="ui-sans-serif">ui-sans-serif</option>
-            <option value="system-ui">system-ui</option>
-            <option value="sans-serif">sans-serif</option>
-            <option value="Arial">Arial</option>
-            <option value="Verdana">Verdana</option>
-            <option value="Helvetica">Helvetica</option>
-            <option value="Tahoma">Tahoma</option>
-            <option value="'Times New Roman'">Times New Roman</option>
-            <option value="Georgia">Georgia</option>
-            <option value="Garamond">Garamond</option>
-            <option value="'Lucida Console'">Lucida Console</option>
-            <option value="'Comic Sans MS'">Comic Sans MS</option>
-            <option value="'Trebuchet MS'">Trebuchet MS</option>
-            <option value="'Impact'">Impact</option>
-            <option value="'Courier'">Courier</option>
-            <option value="'Optima'">Optima</option>
-            <option value="'Hoefler Text'">Hoefler Text</option>
-            <option value="'Plaster'">Plaster</option>
+            <option value="Dirty Headline">Dirty Headline</option>
+            <option value="Tech Headlines">Tech Headlines</option>
+            <option value="Tech Headlines Italic">Tech Headlines Italic</option>
+            <option value="SweetieBubbleGum">Sweetie Bubble Gum</option>
+            <option value="Header Marker">Header Marker</option>
+            <option value="Isle Headline">Isle Headline</option>
+            <option value="Isle Headline Italic">Isle Headline Italic</option>
+            <option value="Mr Headlines Fancy">Mr Headlines Fancy</option>
           </select>
         </li>
         <li className="bg-slate-200 hover:bg-slate-300 dark:bg-zinc-500 dark:hover:bg-zinc-600 shadow-lg rounded-lg p-2 mb-3">
@@ -86,8 +76,6 @@ const Settings = ({ layout, handleLayoutChange }) => {
             onChange={handleLayoutChange}
             className="bg-slate-100 hover:bg-slate-200 dark:bg-zinc-400 dark:hover:bg-zinc-500 dark:text-slate-200 shadow-lg rounded-lg my-1 mx-2 p-2"
           >
-            <option value="ui-sans-serif">ui-sans-serif</option>
-            <option value="system-ui">system-ui</option>
             <option value="sans-serif">sans-serif</option>
             <option value="Arial">Arial</option>
             <option value="Verdana">Verdana</option>
@@ -100,7 +88,6 @@ const Settings = ({ layout, handleLayoutChange }) => {
             <option value="'Comic Sans MS'">Comic Sans MS</option>
             <option value="'Trebuchet MS'">Trebuchet MS</option>
             <option value="'Impact'">Impact</option>
-            <option value="'Courier'">Courier</option>
             <option value="'Optima'">Optima</option>
             <option value="'Hoefler Text'">Hoefler Text</option>
             <option value="'Plaster'">Plaster</option>

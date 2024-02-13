@@ -16,8 +16,43 @@
 }
 
 @font-face {
+  font-family: "Dirty Headline";
+  src: url("./assets/fonts/dirty_headline/Dirty Headline.ttf");
+}
+
+@font-face {
+  font-family: "Tech Headlines";
+  src: url("./assets/fonts/tech_headlines/Tech Headlines.ttf");
+}
+
+@font-face {
+  font-family: "Tech Headlines Italic";
+  src: url("./assets/fonts/tech_headlines/Tech Headlines Italic.ttf");
+}
+
+@font-face {
   font-family: "SweetieBubbleGum";
   src: url("./assets/fonts/sweetie_bubble_gum/SweetieBubbleGum.ttf");
+}
+
+@font-face {
+  font-family: "Header Marker";
+  src: url("./assets/fonts/header_marker/Header Marker.otf");
+}
+
+@font-face {
+  font-family: "Isle Headline";
+  src: url("./assets/fonts/isle_headline/IsleHeadBl_PERSONAL.ttf");
+}
+
+@font-face {
+  font-family: "Isle Headline Italic";
+  src: url("./assets/fonts/isle_headline/IsleHeadBl-i_PERSONAL.ttf");
+}
+
+@font-face {
+  font-family: "Mr Headlines Fancy";
+  src: url("./assets/fonts/mr_headlines/Mr Headlines Fancy.ttf");
 }
 
 @layer base {

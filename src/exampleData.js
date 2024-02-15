@@ -81,6 +81,12 @@ const exampleData = {
       colorFrom: "rgb(2 132 199)",
       colorTo: "rgb(29 78 216)",
     },
+    {
+      id: uuid(),
+      name: "Git",
+      colorFrom: "rgb(2 132 199)",
+      colorTo: "rgb(29 78 216)",
+    },
   ],
 };
 

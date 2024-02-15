@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import Image from "./assets/images/spider-man.png";
+import Image from "./assets/images/profile-silhoutte.png";
 
 const exampleData = {
   personalInfo: {

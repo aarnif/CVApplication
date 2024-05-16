@@ -12,13 +12,15 @@ This is a simple CV application built with Vite + React that allows you to creat
 
 ## Live Preview
 
-[CV Application](https://aarnif.github.io/CVApplication/)
+[CV Application](https://aarnif.github.io/odin-cv-application/)
 
 ## Technologies
 
 - Vite + React
 - Tailwind CSS
 - HTML
+- ChatGPT 4 (for generating example CV)
+- Icons from [Font Awesome](https://fontawesome.com/)
 
 ## Images
 
@@ -31,11 +33,11 @@ Dark Mode
 ## Instructions
 
 ```
-HTTPS - git clone https://github.com/aarnif/CVApplication.git
+HTTPS - git clone https://github.com/aarnif/odin-cv-application.git
 
-SSH - git clone git@github.com:aarnif/CVApplication.git
+SSH - git clone git@github.com:aarnif/odin-cv-application.git
 
-cd CVApplication
+cd odin-cv-application
 
 npm install
 

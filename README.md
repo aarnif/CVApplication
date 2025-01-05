@@ -12,7 +12,7 @@ This is a simple CV application built with Vite + React that allows you to creat
 
 ## Live Preview
 
-[CV Application](https://aarnif.github.io/odin-cv-application/)
+[CV Application](https://aarnif.github.io/cv-application/)
 
 ## Technologies
 
@@ -33,11 +33,11 @@ Dark Mode
 ## Instructions
 
 ```
-HTTPS - git clone https://github.com/aarnif/odin-cv-application.git
+HTTPS - git clone https://github.com/aarnif/cv-application.git
 
-SSH - git clone git@github.com:aarnif/odin-cv-application.git
+SSH - git clone git@github.com:aarnif/cv-application.git
 
-cd odin-cv-application
+cd cv-application
 
 npm install
 
